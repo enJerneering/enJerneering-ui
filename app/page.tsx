@@ -14,20 +14,19 @@ import Testimonials from '@components/Testimonials'
 import BlogList from '@components/blog/BlogList'
 import Contact from '@components/Contact'
 import Footer from '@components/Footer'
+import Gallery from './_components/Gallery'
 
 export default function Home() {
   const baseUrl = getBaseUrl()
 
   return (
-    <div>
-      <Navbar />
+    <div className="w-screen">    
       <HeroHeader />
       <About />
-      <Services />
+      <Gallery />
       <CallToAction />
       <BenefitInformation />
       <Team />
-      <BeforeAfterComparison />
       <Testimonials />
       <BlogList />
       <Contact />
