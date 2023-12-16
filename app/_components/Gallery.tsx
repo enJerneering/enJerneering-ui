@@ -5,6 +5,7 @@ import Carousel, { DotProps } from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Button from "./Button";
 import { ArrowLongRightIcon } from "@heroicons/react/20/solid";
+import Link from "next/link";
 
 const responsive = {
   xl: {
@@ -29,125 +30,36 @@ const responsive = {
   },
 };
 
-interface Service {
-  id: string;
-  category: string;
-  title: string;
-  subTitle: string;
-  imgUrl: string;
+interface GalleryProps {
+  services: Service[];
+  galleryTitle: string;
 }
 
-const Gallery: React.FC = () => {
-  // Todo hard code
-  const services: Service[] = [
-    {
-      id: "1",
-      category: "Skin",
-      title: "Scarlet SRF",
-      subTitle: "SRF",
-      imgUrl: "/img/scarlet-srf-min.jpeg",
-    },
-    {
-      id: "2",
-      category: "Skin",
-      title: "Laser Resurfacing",
-      subTitle: "Laser Treatments",
-      imgUrl: "/img/laser-resurfacing-min.jpeg",
-    },
-    {
-      id: "3",
-      category: "Skin",
-      title: "HALO",
-      subTitle: "Laser Treatments",
-      imgUrl: "/img/HALO-min.jpeg",
-    },
-    {
-      id: "4",
-      category: "Skin",
-      title: "BBL Forever Young",
-      subTitle: "Acne Treatment",
-      imgUrl: "/img/bbl.jpeg",
-    },
-    {
-      id: "5",
-      category: "Skin",
-      title: "Acne Treatment",
-      subTitle: "Acne Treatment",
-      imgUrl: "/img/botox.jpeg",
-    },
-    {
-      id: "6",
-      category: "Skin",
-      title: "Agnes RF Microneedling",
-      subTitle: "Acne Treatment",
-      imgUrl: "/img/laser-resurfacing-min.jpeg",
-    },
-    {
-      id: "7",
-      category: "Skin",
-      title: "Skinpen Microneedling",
-      subTitle: "Acne Treatment",
-      imgUrl: "/img/microneeding-min.jpeg",
-    },
-    {
-      id: "8",
-      category: "Skin",
-      title: "Skin Care",
-      subTitle: "Treatment",
-      imgUrl: "/img/skinpen-min.jpeg",
-    },
-    {
-      id: "9",
-      category: "Skin",
-      title: "Spider Vein Removal",
-      subTitle: "Laser Treatments",
-      imgUrl: "/img/skincare-min.jpeg",
-    },
-    {
-      id: "10",
-      category: "Skin",
-      title: "Aquafirme Facial",
-      subTitle: "Facial",
-      imgUrl: "/img/aquafirme-facial.jpeg",
-    },
-    {
-      id: "11",
-      category: "Skin",
-      title: "Laser Hair",
-      subTitle: "Laser Treatment",
-      imgUrl: "/img/laser-hair.jpeg",
-    },
-    {
-      id: "12",
-      category: "Skin",
-      title: "Packages",
-      subTitle: "Treatment",
-      imgUrl: "/img/packages-min.jpeg",
-    },
-  ];
-
+const Gallery: React.FC<GalleryProps> = ({ services, galleryTitle }) => {
   const CarouselItem = ({ item }: { item: Service }): JSX.Element => (
-    <div
-      style={{ backgroundImage: `url(${item.imgUrl})` }}
-      className="group flex mx-6 h-[400px] rounded-2xl bg-cover bg-bottom overflow-hidden"
-    >
-      <div className="flex flex-col justify-end gap-6 w-full pl-6 pb-8 text-white bg-linear-1 opacity-70 group-hover:opacity-90 group-hover:animate-slide-up">
-        <span className="text-sm leading-6 font-normal">{item.category}</span>
-        <div>
-          <h5 className="text-white">{item.title}</h5>
-          <span className="text-base leading-8 font-normal">
-            {item.subTitle}
-          </span>
-        </div>
-        <div className="hidden group-hover:block">
-          <Button
-            color="secondary"
-            label="Learn more"
-            icon={<ArrowLongRightIcon className="w-5 h-5" />}
-          />
+    <Link href={item.href}>
+      <div
+        style={{ backgroundImage: `url(${item.imgUrl})` }}
+        className="group flex mx-6 h-[400px] rounded-2xl bg-cover bg-bottom overflow-hidden"
+      >
+        <div className="flex flex-col justify-end gap-6 w-full pl-6 pb-8 text-white bg-linear-1 opacity-70 lg:group-hover:opacity-90 lg:group-hover:animate-slide-up">
+          <span className="text-sm leading-6 font-normal">{item.category}</span>
+          <div>
+            <h5 className="text-white">{item.title}</h5>
+            <span className="text-base leading-8 font-normal">
+              {item.subTitle}
+            </span>
+          </div>
+          <div className="sm:hidden group-hover:block">
+            <Button
+              color="secondary"
+              label="Learn more"
+              icon={<ArrowLongRightIcon className="w-5 h-5" />}
+            />
+          </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 
   const CustomDots = ({ index, active, onClick, carouselState }: DotProps) => {
@@ -162,13 +74,16 @@ const Gallery: React.FC = () => {
   };
 
   return (
-    <div className="bg-white py-20">
-      <h3 className="mx-auto max-w-screen-xl pt-20 px-6">Our Services</h3>
+    <div className="p-2 mb-10">
+      <h3 className="mx-auto max-w-screen-xl px-6 text-center">{galleryTitle}</h3>
       <Carousel
         responsive={responsive}
         ssr
+        autoPlay
+        autoPlaySpeed={3000}
+        rewind
         deviceType={""}
-        arrows={false}
+        arrows
         showDots
         dotListClass="flex gap-3"
         className="mx-auto max-w-screen-xl py-10"

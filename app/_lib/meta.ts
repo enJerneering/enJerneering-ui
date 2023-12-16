@@ -1,5 +1,5 @@
 export function getBaseUrl() {
-  return 'https://revitalize-med-spa.com/';
+  return 'https://www.revitalize-med-spa.com/';
 }
 
 export function getPaths() {
@@ -11,7 +11,7 @@ export function getPaths() {
         'michael-thorpe',
         //Services
         'agnes-rf',
-        'aquafirme-facial',
+        'facials',
         'bbl-forever-young',
         'botox-fillers',
         'halo',
@@ -22,10 +22,12 @@ export function getPaths() {
         'skin-care',
         'skinpen-microneedling',
         'spider-vein-removal',
+        'cryo-treatments',
+        'iv-therapy',
         //Blog
-        'battle-against-imperfections',
-        'exclusive-package-deals',
-        'facial-enhancements',
-        'innovations-in-skin-rejuvenation',
+        'blog/2023/battle-against-imperfections',
+        'blog/2023/exclusive-package-deals',
+        'blog/2023/facial-enhancements',
+        'blog/2023/innovations-in-skin-rejuvenation',
     ]
 }

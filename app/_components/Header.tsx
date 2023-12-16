@@ -1,8 +1,10 @@
-import Image from 'next/image';
-import React from 'react';
-import Button from './Button';
-import { ArrowLongRightIcon } from '@heroicons/react/20/solid';
+"use client";
 
+import Image from "next/image";
+import React from "react";
+import Button from "./Button";
+import { ArrowLongRightIcon } from "@heroicons/react/20/solid";
+import useRedirect from "@/_hooks/useRedirect";
 
 interface HeaderProps {
   features: Feature[];
@@ -11,9 +13,16 @@ interface HeaderProps {
   subtitle: string;
 }
 
-const Header: React.FC<HeaderProps> = ({ features, imgSrc, title, subtitle }) => {
+const Header: React.FC<HeaderProps> = ({
+  features,
+  imgSrc,
+  title,
+  subtitle,
+}) => {
+  const { handleRedirect } = useRedirect();
+
   return (
-    <div className="flex bg-white">
+    <div className="flex">
       <div className="mx-auto max-w-screen-xl py-20 px-6 gap-10 md:flex lg:items-center lg:justify-between lg:gap-16">
         <div className="flex flex-col justify-center gap-6 w-full lg:h-full md:w-1/2">
           <Image
@@ -45,6 +54,7 @@ const Header: React.FC<HeaderProps> = ({ features, imgSrc, title, subtitle }) =>
           <Button
             label="Book Appointment"
             icon={<ArrowLongRightIcon className="w-5 h-5" />}
+            onClick={handleRedirect}
           />
         </div>
       </div>

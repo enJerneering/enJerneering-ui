@@ -9,41 +9,45 @@ import { ArrowLongRightIcon } from "@heroicons/react/20/solid";
 import { CheckCircleIcon } from "@heroicons/react/24/solid";
 
 interface PlaceholderProps {
-  // Define any props you need here
+  benefits: string[];
+  teamImage: string;
+  teamTitle: string;
+  teamSubtitle: string;
+  teamDescription: string;
+  teamLabelButton: string;
 }
 
-const Team: React.FC<PlaceholderProps> = (props) => {
+const Team: React.FC<PlaceholderProps> = ({
+  benefits,
+  teamImage,
+  teamTitle,
+  teamSubtitle,
+  teamDescription,
+  teamLabelButton,
+}) => {
   const router = useRouter();
 
-  const handleViewDoctor = (): void => {
-    router.push(`/michael-thorpe`);
+  const handleLearnMore = (): void => {
+    router.push("/michael-thorpe");
   };
 
-  const benefits = [
-    "Minimally invasive surgery specialist",
-    "Founder of Indiana Vein Institute and ReVitalize Med Spa",
-    "Specializes in varicose veins and surgical dermatology",
-  ];
-
   return (
-    <div className="flex bg-primary-100">
+    <div className="flex bg-primary-100 p-2">
       <div className="mx-auto max-w-screen-xl py-20 px-6 gap-10 md:flex lg:items-center lg:justify-between lg:gap-20">
-        <div className="flex flex-col gap-6 w-full lg:h-full md:w-1/2">
+        <div className="flex flex-col gap-6 w-full lg:h-full md:w-1/2 justify-center">
           <Image
-            src="/img/team.png"
-            width={424}
-            height={530}
+            src={teamImage}
+            width={500}
+            height={600}
             alt="team"
             className="w-full"
           />
         </div>
 
         <div className="mt-10 flex flex-col items-start gap-6  lg:mt-0 lg:flex-shrink-0 lg:h-full md:w-1/2">
-          <h5>Meet The Doctor</h5>
+          <h5>{teamTitle}</h5>
           <div className="flex gap-5 border-l-[5px] border-primary-500 ">
-            <h3 className="pl-[30px]">
-              Dr. Thorpe, the face behind ReVitalize!
-            </h3>
+            <h3 className="pl-[30px]">{teamSubtitle}</h3>
           </div>
           <ul
             role="list"
@@ -59,22 +63,12 @@ const Team: React.FC<PlaceholderProps> = (props) => {
               </li>
             ))}
           </ul>
-          <h6>
-            Michael Thorpe, MD, is a minimally invasive surgery specialist and
-            founder of the Indiana Vein Institute and, most recently, ReVitalize
-            Med Spa. Dr. Thorpe specializes in varicose veins and surgical
-            dermatology, which sparked his passion to help people on their
-            journey to look and feel like their authentic selves.
-            <br />
-            This passion sparked his vision to open ReVitalize Med Spa where his
-            goal is to enhance your natural beauty and individual qualities
-            through medical-grade procedures and therapies.
-          </h6>
+          <h6 className="whitespace-pre-line">{teamDescription}</h6>
 
           <Button
-            label="Learn more"
+            label={teamLabelButton}
             icon={<ArrowLongRightIcon className="w-5 h-5" />}
-            onClick={handleViewDoctor}
+            onClick={handleLearnMore}
           />
         </div>
       </div>

@@ -7,17 +7,20 @@ const myFont = localFont({
 });
 
 interface ContactFormProps {
-  // Define any props you need here
+  contactTitle: string;
+  contactSubtitle: string;
+  contactBgImage: string;
 }
 
-const ContactForm: React.FC<ContactFormProps> = (props) => {
-  // Todo hard code
-  const imgUrl = "/img/bg-contact.png";
-
+const ContactForm: React.FC<ContactFormProps> = ({
+  contactTitle,
+  contactSubtitle,
+  contactBgImage,
+}) => {
   return (
-    <div className="bg-white relative">
+    <div className="relative">
       <div
-        style={{ backgroundImage: `url(${imgUrl})` }}
+        style={{ backgroundImage: `url(${contactBgImage})` }}
         className="absolute top-0 h-[608px] w-full bg-[image:var(--image-url)] bg-cover"
       ></div>
 
@@ -26,10 +29,10 @@ const ContactForm: React.FC<ContactFormProps> = (props) => {
           style={myFont.style}
           className="text-[56px]/[56px] font-normal text-white"
         >
-          Make an Appointment Now!
+          {contactTitle}
         </span>
         <div className="mt-4 text-2xl leading-10 font-normal text-gray-400">
-          Let us guide you on a journey of relaxation
+          {contactSubtitle}
         </div>
 
         <form

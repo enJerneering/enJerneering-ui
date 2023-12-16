@@ -122,15 +122,18 @@ const Reviews: React.FC<ReviewsProps> = (props) => {
   );
 
   return (
-    <div className="bg-white py-20">
+    <div className=" py-20">
       <h3 className="mx-auto max-w-screen-xl pt-20 px-6 text-center pb-10">
         What Our Clients Say
       </h3>
       <Carousel
         responsive={responsive}
         ssr
+        autoPlay
+        autoPlaySpeed={3000}
+        rewind
         deviceType={""}
-        arrows={false}
+        arrows
         showDots
         dotListClass="flex gap-3"
         className="mx-auto max-w-screen-xl py-10"

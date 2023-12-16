@@ -2,6 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+
+  h1 {
+    @apply text-4xl leading-10 font-bold text-primary-900;
+  }
+
+  h2 {
+    @apply text-xl leading-10 font-bold text-primary-900;
+  }
+
+  h3 {
+    @apply text-h3 leading-h3 font-bold text-primary-900;
+  }
+
+  h4 {
+    @apply text-h4 leading-h4 font-bold text-primary-900;
+  }
+
+  h5 {
+    @apply text-2xl leading-10 font-bold text-primary-900;
+  }
+
+  h6 {
+    @apply text-base leading-8 font-normal text-primary-900;
+  }
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -16,12 +43,63 @@
   }
 }
 
+h1 {
+  font-family: var(--font-cinzel-decorative)
+}
+
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  font-family: var(--font-cinzel);
 }
+
+.button {
+  @apply flex items-center justify-center gap-2 rounded-lg font-medium;
+}
+
+.button-primary {
+  @apply border border-primary-500 bg-primary-500 text-white hover:bg-primary-700 focus:bg-primary-500 focus:border-2 focus:border-primary-100;
+}
+
+.button-secondary {
+  @apply border border-white bg-transparent text-white hover:bg-white hover:text-gray-900;
+}
+
+.button-small {
+  @apply px-3 py-2 text-xs;
+}
+
+.button-medium {
+  @apply px-5 py-3 text-sm;
+}
+
+.button-large {
+  @apply px-6 py-3.5 text-base;
+}
+
+.react-multi-carousel-dot-list-custom {
+  position: relative !important;
+  margin: 48px 24px 0 !important;
+  gap: 40px;
+  width: 100%;
+}
+
+.react-compare-image-custom [data-testid="container"] {
+  height: 672px !important;
+}
+
+@media (max-width: 1024px) {
+  .react-compare-image-custom [data-testid="container"] {
+    height: 400px !important;
+  }
+}
+
+.bgWrap {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+

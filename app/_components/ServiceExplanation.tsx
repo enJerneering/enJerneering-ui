@@ -8,7 +8,7 @@ interface ServiceExplanationProps {
 
 const ServiceExplanation: React.FC<ServiceExplanationProps> = ({ features, title }) => {
   return (
-    <div className="bg-white py-20">
+    <div className="py-20">
       <div className="mx-auto max-w-screen-xl px-6 lg:px-8">
         <div className="mx-auto max-w-screen-xl text-center lg:mx-0">
           <h3>{title}</h3>

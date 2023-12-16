@@ -181,7 +181,7 @@ export default function DoctorDetail() {
           <div className="flex gap-5 justify-start items-center">
             {info.icon}
             <div className="text-primary-900 font-bold text-[24px] leading-[40px] mb-3">
-              {info.title}
+              <h1>{info.title}</h1>
             </div>
           </div>
           {info.content.map((content: Content, index: number) => (

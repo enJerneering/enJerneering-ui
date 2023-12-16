@@ -37,7 +37,7 @@ const BeforeAfterComparison: React.FC<BeforeAfterComparisonProps> = (props) => {
 
     return (
       <div className="w-full flex flex-col gap-4 mx-6">
-        <div className="bg-white px-6 py-4 gap-4 rounded-b-2xl">
+        <div className="px-6 py-4 gap-4 rounded-b-2xl">
           <h5>Case {currentSlide ? currentSlide + 1 : 1}</h5>
           <div className="flex justify-between">
             <div
@@ -86,8 +86,8 @@ const BeforeAfterComparison: React.FC<BeforeAfterComparisonProps> = (props) => {
   };
 
   return (
-    <div className="bg-primary-100 py-20">
-      <h3 className="mx-auto max-w-screen-xl pt-20 px-6">Before & After</h3>
+    <div className="bg-primary-100 pt-12 pb-12">
+      <h1 className="text-6xl mx-auto max-w-screen-xl pt-12 pb-12 px-6 text-center">See the Improvement!</h1>
 
       <Carousel
         responsive={responsive}
@@ -103,10 +103,16 @@ const BeforeAfterComparison: React.FC<BeforeAfterComparisonProps> = (props) => {
         customDot={<CustomDots />}
       >
         {cases.map((item) => (
-          <div
-            className="flex mx-6 rounded-t-2xl overflow-hidden react-compare-image-custom"
-            key={item.id}
-          >
+          <div className="flex mx-6 rounded-t-2xl overflow-hidden react-compare-image-custom relative" key={item.id}>
+            {/* Before label */}
+            <div className="absolute top-0 left-0 z-10 bg-opacity-50 bg-white text-black p-2">
+              Before
+            </div>
+            {/* After label */}
+            <div className="absolute top-0 right-0 z-10 bg-opacity-50 bg-white text-black p-2">
+              After
+            </div>
+            {/* Image comparison */}
             <ReactCompareImage
               leftImage={item.firstImage}
               rightImage={item.secondImage}
@@ -115,6 +121,7 @@ const BeforeAfterComparison: React.FC<BeforeAfterComparisonProps> = (props) => {
         ))}
       </Carousel>
     </div>
+
   );
 };
 

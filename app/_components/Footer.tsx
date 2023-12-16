@@ -7,53 +7,78 @@ interface FooterProps {
 
 const navigation = {
   revitalize: [
-    { name: "About", href: "#" },
-    { name: "Services", href: "#" },
-    { name: "Blog", href: "#" },
-    { name: "Make Appointment", href: "#" },
+    { name: "About", href: "/about-us" },
+    { name: "Blog", href: "/blog" },
+    {
+      name: "Make Appointment",
+      href: "https://www.vagaro.com/revitalizemedspa",
+    },
+    { name: "Contact", href: "/contact-us"},
+    { name: "Michael Thorpe, MD", href: "/michael-thorpe"}
   ],
   beforeAndAfter: [
-    { name: "BBL Forever Young", href: "#" },
-    { name: "HALO", href: "#" },
-    { name: "Laser Resurfacing", href: "#" },
+    { name: "BBL Forever Young", href: "/bbl-forever-young" },
+    { name: "HALO", href: "/halo" },
+    { name: "Laser Resurfacing", href: "/laser-resurfacing" },
   ],
   legal: [
-    { name: "Privacy Policy", href: "#" },
-    { name: "Terms & Conditions", href: "#" },
+    { name: "Privacy Policy", href: "/privacy-policy" },
+    { name: "Terms & Conditions", href: "/terms-of-service" },
+  ],
+  services: [
+    { name: "BBL Forever Young", href: "/bbl-forever-young" },
+    { name: "HALO", href: "/halo" },
+    { name: "Laser Resurfacing", href: "/laser-resurfacing" },
+    { name: "Scarlet SRF", href: "/scarlet-srf" },
+    { name: "Agnes RF", href: "/agnes-rf" },
+    { name: "Facials", href: "/facials"},
+    { name: "Botox & Fillers", href: "/botox-fillers" },
+    { name: "Laser Hair Removal", href: "/laser-hair-removal" },
+    { name: "Skin Care", href: "/skin-care"},
+    { name: "Skinpen Microneedling", href: "/skinpen-microneedling"},
+    { name: "IV Therapy", href: "/iv-therapy"},
+    { name: "Cryo Treatments", href: "/cryo-treatments"},
+    { name: "Packages", href: "/packages"}
   ],
   social: [
     {
       name: "Instagram",
-      href: "#",
+      href: "https://www.instagram.com/revitalize_med_spa/",
       icon: "/img/instagram.svg",
     },
     {
       name: "Facebook",
-      href: "#",
+      href: "https://www.facebook.com/ReVitalizeMedSpaMuncieIndiana",
       icon: "/img/facebook.svg",
     },
+    {
+      name: "TikTok",
+      href: "https://www.tiktok.com/@revitalize_medspa",
+      icon: "/img/tiktok.svg",
+    }
   ],
 };
 
 const Footer: React.FC<FooterProps> = (props: any) => {
   const year = new Date().getFullYear();
-  const companyName = "Revitalize, Inc";
+  const companyName = "ReVitalize Med Spa";
 
   return (
-    <div>
-      <footer className="bg-white" aria-labelledby="footer-heading">
+    <div className="z-30">
+      <footer aria-labelledby="footer-heading">
         <h2 id="footer-heading" className="sr-only">
           Footer
         </h2>
         <div className="mx-auto max-w-screen-xl px-6 pb-8 pt-16 sm:pt-24 lg:py-16">
           <div className="xl:grid xl:grid-cols-3 xl:gap-[90px]">
-            <div className="space-y-8">
+            <div className="flex flex-col items-center space-y-8">
               <Image
                 src="/img/logo.svg"
-                alt="Company name"
-                width={122}
-                height={60}
+                alt="ReVitalize Med Spa Logo"
+                width={250}
+                height={125}
               />
+              <br />
               <p className="text-base font-normal text-gray-500">
                 We combine a relaxing spa environment with medical-grade
                 procedures and therapies to help you achieve your desired
@@ -69,15 +94,15 @@ const Footer: React.FC<FooterProps> = (props: any) => {
                     <span className="sr-only">{item.name}</span>
                     <Image
                       src={item.icon}
-                      width={24}
-                      height={24}
+                      width={48}
+                      height={48}
                       alt={item.name}
                     />
                   </a>
                 ))}
               </div>
             </div>
-            <div className="mt-16 grid grid-cols-2 md:grid-cols-3 xl:col-span-2 gap-8 xl:mt-0">
+            <div className="mt-16 grid grid-cols-2 md:grid-cols-4 xl:col-span-2 gap-8 xl:mt-0">
               <div>
                 <h3 className="uppercase text-sm font-semibold text-gray-900">
                   REVITALIZE
@@ -101,6 +126,23 @@ const Footer: React.FC<FooterProps> = (props: any) => {
                 </h3>
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.beforeAndAfter.map((item) => (
+                    <li key={item.name}>
+                      <a
+                        href={item.href}
+                        className="text-base font-normal text-gray-500 hover:text-gray-900"
+                      >
+                        {item.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h3 className="uppercase text-sm font-semibold text-gray-900">
+                  SERVICES
+                </h3>
+                <ul role="list" className="mt-6 space-y-4">
+                  {navigation.services.map((item) => (
                     <li key={item.name}>
                       <a
                         href={item.href}
