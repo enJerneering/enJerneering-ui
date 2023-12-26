@@ -29,13 +29,10 @@
 - `Component 2`: Brief description.
 - ...
 
-## Contributing
-
-We welcome contributions! Please read our [Contributing Guidelines](link-to-contributing-guidelines) for details on how to contribute.
 
 ## License
 
-This software is privately licensed by enJerneering LLC. For more information, see the [LICENSE](link-to-license) file.
+This software is privately licensed by enJerneering LLC.
 
 
 ## Changelog
