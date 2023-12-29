@@ -17,10 +17,10 @@ const config: Config = {
       },
       colors: {
         primary: {
-          900: "#133E53",
-          700: "#359ECF",
-          500: "#88C6E3",
-          100: "#E6F3F9",
+          900: "#E09D37",
+          600: "#F7C343",
+          400: "#FBE09D",
+          100: "#FEF9EB",
         },
       },
       fontSize: {
