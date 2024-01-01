@@ -28,12 +28,6 @@ export default function RootLayout({
           <Banner />
           <Navbar />
         </div>
-        <div className="relative">
-          <BackgroundImage
-            src="/img/white-background.jpeg"
-            alt="White Background"
-          />
-        </div>
         <main className="flex-grow mt-24 relative">{children}</main>
         <Footer />
       </body>

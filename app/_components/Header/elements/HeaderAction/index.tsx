@@ -5,31 +5,31 @@ import useRedirect from "@/_hooks/useRedirect";
 import Button from "@/_components/Button";
 
 interface HeaderActionProps {
-  btnPrimaryLabel: string;
-  btnSecondaryLabel: string;
-  btnPrimaryUrl: string;
-  btnSecondaryUrl: string;
+  primaryLabel: string;
+  secondaryLabel: string;
+  primaryUrl: string;
+  secondaryUrl: string;
 }
 
 const HeaderAction: React.FC<HeaderActionProps> = ({
-  btnPrimaryLabel,
-  btnSecondaryLabel,
-  btnPrimaryUrl,
-  btnSecondaryUrl,
+  primaryLabel,
+  secondaryLabel,
+  primaryUrl,
+  secondaryUrl,
 }) => {
   const { handleRedirect } = useRedirect();
 
   return (
     <div className="flex items-center gap-4">
       <Button
-        label={btnPrimaryLabel}
+        label={primaryLabel}
         iconLeft={<i className="pi pi-bolt"></i>}
-        onClick={() => handleRedirect(btnPrimaryUrl)}
+        onClick={() => handleRedirect(primaryUrl)}
       />
       <Button
         color="secondary"
-        label={btnSecondaryLabel}
-        onClick={() => handleRedirect(btnSecondaryUrl)}
+        label={secondaryLabel}
+        onClick={() => handleRedirect(secondaryUrl)}
       />
     </div>
   );

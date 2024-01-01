@@ -34,7 +34,7 @@ const Team: React.FC<PlaceholderProps> = ({
   return (
     <div className="flex bg-primary-100 p-2">
       <div className="mx-auto max-w-screen-xl py-20 px-6 gap-10 md:flex lg:items-center lg:justify-between lg:gap-20">
-        <div className="flex flex-col gap-6 w-full lg:h-full md:w-1/2 justify-center">
+        <div className="flex dark: flex-col gap-6 w-full lg:h-full md:w-1/2 justify-center">
           <Image
             src={teamImage}
             width={500}

@@ -3,10 +3,11 @@
 import React from "react";
 import ModalVideo from "../ModalVideo";
 import type { StaticImageData } from "next/image";
-import { HeaderAction } from "./elements/HeaderAction";
+import HeaderAction from "./elements/HeaderAction";
+import { HeaderData } from "./types/HeaderData";
 
 interface HeaderProps {
-  data: App.Header;
+  data: HeaderData;
 }
 
 function classNames(...classes: any) {
@@ -17,10 +18,10 @@ const HeaderType3: React.FC<HeaderProps> = ({ data }) => {
   const {
     title = "Default Title",
     subtitle = "Default Subtitle",
-    btnPrimaryLabel = "Primary Button",
-    btnSecondaryLabel = "Secondary Button",
-    btnPrimaryUrl = "#",
-    btnSecondaryUrl = "#",
+    primaryLabel = "Primary Button",
+    secondaryLabel = "Secondary Button",
+    primaryUrl = "#",
+    secondaryUrl = "#",
     tagLine = "Default Tagline",
     imgUrl = "default-image.jpg",
     videoUrl = "default-video.mp4",
@@ -45,10 +46,10 @@ const HeaderType3: React.FC<HeaderProps> = ({ data }) => {
           </div>
 
           <HeaderAction
-            btnPrimaryLabel={btnPrimaryLabel}
-            btnSecondaryLabel={btnSecondaryLabel}
-            btnPrimaryUrl={btnPrimaryUrl}
-            btnSecondaryUrl={btnSecondaryUrl}
+            primaryLabel={primaryLabel}
+            secondaryLabel={secondaryLabel}
+            primaryUrl={primaryUrl}
+            secondaryUrl={secondaryUrl}
           />
         </div>
         <div className="mt-10 lg:h-full lg:w-1/2">

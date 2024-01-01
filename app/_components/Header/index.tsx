@@ -1,25 +1,28 @@
 "use client";
 
 import React from "react";
-import HeaderType1 from "./Header_type1";
-import HeaderType3 from "./Header_type3";
-import HeaderType2 from "./Header_type2";
+import HeaderType1 from "./_HeaderType1";
+import HeaderType2 from "./_HeaderType2";
+import HeaderType3 from "./_HeaderType3";
 import { HeaderTypeEnum } from "@/_enum/app";
+import { HeaderData } from "./types/HeaderData";
 
 interface HeaderProps {
-  type: string;
-  data: App.Header;
+  type: number;
+  data: HeaderData;
 }
 
 const Header: React.FC<HeaderProps> = ({ type, data }) => {
-  const renderHeaderComponent = (type: string) => {
+  const renderHeaderComponent = (type: number) => {
     switch (type) {
-      case HeaderTypeEnum.HeaderType1:
+      case 1:
         return <HeaderType1 data={data} />;
-      case HeaderTypeEnum.HeaderType2:
+      case 2:
         return <HeaderType2 data={data} />;
-      default:
+      case 3:
         return <HeaderType3 data={data} />;
+      default:
+        throw new Error(`Header type ${type} is not supported`);
     }
   };
 
