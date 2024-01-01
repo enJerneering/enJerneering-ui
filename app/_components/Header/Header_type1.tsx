@@ -1,16 +1,21 @@
 "use client";
 
 import React from "react";
-import Button from "../Button";
-import useRedirect from "@/_hooks/useRedirect";
+import { HeaderAction } from "./elements/HeaderAction";
 
 interface HeaderProps {
-  title: string;
-  subtitle: string;
+  data: App.Header;
 }
 
-const HeaderType1: React.FC<HeaderProps> = ({ title, subtitle }) => {
-  const { handleRedirect } = useRedirect();
+const HeaderType1: React.FC<HeaderProps> = ({ data }) => {
+  const {
+    title = "Default Title",
+    subtitle = "Default Subtitle",
+    btnPrimaryLabel = "Primary Button",
+    btnSecondaryLabel = "Secondary Button",
+    btnPrimaryUrl = "#",
+    btnSecondaryUrl = "#",
+  } = data;
 
   return (
     <div className="bg-white m-h-[624px]">
@@ -21,18 +26,12 @@ const HeaderType1: React.FC<HeaderProps> = ({ title, subtitle }) => {
             <h6>{subtitle}</h6>
           </div>
 
-          <div className="flex items-center gap-4">
-            <Button
-              label="Button Content"
-              iconLeft={<i className="pi pi-bolt"></i>}
-              onClick={handleRedirect}
-            />
-            <Button
-              color="secondary"
-              label="Learn More…"
-              onClick={handleRedirect}
-            />
-          </div>
+          <HeaderAction
+            btnPrimaryLabel={btnPrimaryLabel}
+            btnSecondaryLabel={btnSecondaryLabel}
+            btnPrimaryUrl={btnPrimaryUrl}
+            btnSecondaryUrl={btnSecondaryUrl}
+          />
         </div>
       </div>
     </div>

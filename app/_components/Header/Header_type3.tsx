@@ -1,33 +1,31 @@
 "use client";
 
 import React from "react";
-import Button from "../Button";
-import useRedirect from "@/_hooks/useRedirect";
 import ModalVideo from "../ModalVideo";
 import type { StaticImageData } from "next/image";
+import { HeaderAction } from "./elements/HeaderAction";
 
 interface HeaderProps {
-  title: string;
-  subtitle: string;
-  tagline: string;
-  backgroundImage: string;
-  videoUrl: string;
-  isRowReverse: boolean;
+  data: App.Header;
 }
 
 function classNames(...classes: any) {
   return classes.filter(Boolean).join(" ");
 }
 
-const HeaderType3: React.FC<HeaderProps> = ({
-  title,
-  subtitle,
-  tagline,
-  backgroundImage,
-  videoUrl,
-  isRowReverse,
-}) => {
-  const { handleRedirect } = useRedirect();
+const HeaderType3: React.FC<HeaderProps> = ({ data }) => {
+  const {
+    title = "Default Title",
+    subtitle = "Default Subtitle",
+    btnPrimaryLabel = "Primary Button",
+    btnSecondaryLabel = "Secondary Button",
+    btnPrimaryUrl = "#",
+    btnSecondaryUrl = "#",
+    tagLine = "Default Tagline",
+    imgUrl = "default-image.jpg",
+    videoUrl = "default-video.mp4",
+    isRowReverse = false,
+  } = data;
 
   return (
     <div className="bg-white m-h-[624px]">
@@ -41,27 +39,21 @@ const HeaderType3: React.FC<HeaderProps> = ({
       >
         <div className="flex flex-col gap-10 w-full lg:h-full lg:w-1/2">
           <div className="flex flex-col gap-6 text-left">
-            <span className="text-base uppercase font-bold">{tagline}</span>
+            <span className="text-base uppercase font-bold">{tagLine}</span>
             <h1>{title}</h1>
             <h6>{subtitle}</h6>
           </div>
 
-          <div className="flex items-center gap-4">
-            <Button
-              label="Button Content"
-              iconLeft={<i className="pi pi-bolt"></i>}
-              onClick={handleRedirect}
-            />
-            <Button
-              color="secondary"
-              label="Learn More…"
-              onClick={handleRedirect}
-            />
-          </div>
+          <HeaderAction
+            btnPrimaryLabel={btnPrimaryLabel}
+            btnSecondaryLabel={btnSecondaryLabel}
+            btnPrimaryUrl={btnPrimaryUrl}
+            btnSecondaryUrl={btnSecondaryUrl}
+          />
         </div>
         <div className="mt-10 lg:h-full lg:w-1/2">
           <ModalVideo
-            thumb={backgroundImage as unknown as StaticImageData}
+            thumb={imgUrl as unknown as StaticImageData}
             thumbWidth={600}
             thumbHeight={464}
             thumbAlt="Modal video thumbnail"

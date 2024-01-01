@@ -24,3 +24,9 @@ export enum NavbarItemEnum {
   IVTherapy = "IV Therapy",
   Specials = "Specials",
 }
+
+export enum HeaderTypeEnum {
+  HeaderType1 = "HeaderType1",
+  HeaderType2 = "HeaderType2",
+  HeaderType3 = "HeaderType3",
+}

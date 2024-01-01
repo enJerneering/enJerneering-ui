@@ -1,27 +1,28 @@
 "use client";
 
 import React from "react";
-import Button from "../Button";
-import useRedirect from "@/_hooks/useRedirect";
+import { HeaderAction } from "./elements/HeaderAction";
 
 interface HeaderProps {
-  title: string;
-  subtitle: string;
-  backgroundImage: string;
+  data: App.Header;
 }
 
-const HeaderType2: React.FC<HeaderProps> = ({
-  title,
-  subtitle,
-  backgroundImage,
-}) => {
-  const { handleRedirect } = useRedirect();
+const HeaderType2: React.FC<HeaderProps> = ({ data }) => {
+  const {
+    title = "Default Title",
+    subtitle = "Default Subtitle",
+    btnPrimaryLabel = "Primary Button",
+    btnSecondaryLabel = "Secondary Button",
+    btnPrimaryUrl = "#",
+    btnSecondaryUrl = "#",
+    imgUrl = "default-image.jpg",
+  } = data;
 
   return (
     <div
       className="bg-white m-h-[624px]"
       style={{
-        background: `linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url(${backgroundImage}), lightgray 50%`,
+        background: `linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url(${imgUrl}), lightgray 50%`,
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
@@ -34,18 +35,12 @@ const HeaderType2: React.FC<HeaderProps> = ({
             <h6 className="text-white">{subtitle}</h6>
           </div>
 
-          <div className="flex items-center gap-4">
-            <Button
-              label="Button Content"
-              iconLeft={<i className="pi pi-bolt"></i>}
-              onClick={handleRedirect}
-            />
-            <Button
-              color="secondary"
-              label="Learn More…"
-              onClick={handleRedirect}
-            />
-          </div>
+          <HeaderAction
+            btnPrimaryLabel={btnPrimaryLabel}
+            btnSecondaryLabel={btnSecondaryLabel}
+            btnPrimaryUrl={btnPrimaryUrl}
+            btnSecondaryUrl={btnSecondaryUrl}
+          />
         </div>
       </div>
     </div>
