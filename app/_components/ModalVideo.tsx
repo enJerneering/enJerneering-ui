@@ -31,19 +31,20 @@ export default function ModalVideo({
     <div className="flex justify-center">
       {/* Video thumbnail */}
       <button
-        className="relative flex justify-center items-center focus:outline-none focus-visible:ring focus-visible:ring-indigo-300 rounded-3xl group"
+        className="relative flex justify-center items-center h-[40vh] overflow-hidden lg:h-auto lg:overflow-auto focus:outline-none focus-visible:ring focus-visible:ring-indigo-300 rounded-3xl group"
         onClick={() => {
           setModalOpen(true);
         }}
         aria-label="Watch the video"
       >
         <Image
-          className="rounded-3xl shadow-2xl transition-shadow duration-300 ease-in-out"
+          className="rounded-3xl shadow-2xl transition-shadow duration-300 ease-in-out w-full"
           src={thumb}
           width={thumbWidth}
           height={thumbHeight}
           priority
           alt={thumbAlt}
+          style={{ height: thumbHeight }}
         />
         {/* Play icon */}
         <svg
