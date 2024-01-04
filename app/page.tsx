@@ -14,7 +14,7 @@ export default function Home() {
   const baseUrl = getBaseUrl();
 
   return (
-    <div className="w-screen">
+    <div>
       <Header type={headerType} data={headerData} />
     </div>
   );

@@ -29,7 +29,7 @@ const HeaderType3: React.FC<HeaderProps> = ({ data }) => {
   } = data;
 
   return (
-    <div className="bg-white m-h-[624px]">
+    <div className="bg-gray-50 m-h-[624px]">
       <div
         className={classNames(
           "mx-auto max-w-[1440px] px-6 py-20 gap-10 lg:p-20 lg:flex lg:items-center lg:justify-between lg:gap-20",

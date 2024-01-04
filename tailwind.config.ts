@@ -22,6 +22,9 @@ const config: Config = {
           400: "#FBE09D",
           100: "#FEF9EB",
         },
+        nav: {
+          100: "#F0F0F0",
+        },
       },
       fontSize: {
         h3: "2.5rem",

@@ -3,3 +3,7 @@ export function windowOpen(url: string) {
     window.open(url, "_blank");
   }
 }
+
+export function classNames(...classes: string[]): string {
+  return classes.filter(Boolean).join(" ");
+}

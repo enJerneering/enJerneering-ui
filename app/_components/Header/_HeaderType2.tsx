@@ -21,7 +21,7 @@ const HeaderType2: React.FC<HeaderProps> = ({ data }) => {
   } = data;
 
   return (
-    <div className="bg-white m-h-[624px] relative">
+    <div className="bg-gray-50 m-h-[624px] relative">
       <div className="absolute inset-0 z-0">
         <Image
           src={imgUrl}

@@ -4,7 +4,6 @@ import React from "react";
 import HeaderType1 from "./_HeaderType1";
 import HeaderType2 from "./_HeaderType2";
 import HeaderType3 from "./_HeaderType3";
-import { HeaderTypeEnum } from "@/_enum/app";
 import { HeaderData } from "./types/HeaderData";
 
 interface HeaderProps {
