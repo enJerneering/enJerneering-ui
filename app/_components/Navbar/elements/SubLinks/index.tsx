@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { SubLink } from "../../types/NavbarData";
 import SubLinkType1 from "./_SubLinkType1";
 import SubLinkType2 from "./_SubLinkType2";
 import SubLinkType3 from "./_SubLinkType3";
@@ -8,10 +9,15 @@ import SubLinkType3 from "./_SubLinkType3";
 interface HeaderProps {
   type: number;
   title: string;
-  subLinks: App.SubLink[];
+  subLinks: SubLink[];
   isMobile: boolean;
 }
 
+/**
+ * SubLink component is used to render sub links in the navbar
+ * @param param0 = { type, title, subLinks, isMobile }
+ * @returns 
+ */
 const SubLink: React.FC<HeaderProps> = ({
   type,
   title,

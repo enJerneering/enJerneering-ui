@@ -30,7 +30,7 @@ export const headerData: HeaderData = {
 //Navbar
 export const navbarType = 3;
 export const navbarData: NavbarData = {
-  logo: "/img/logo.svg",
+  logo: "/img/enJerneering_black.png",
   menuList: [
     {
       title: "Link 1",
@@ -127,22 +127,21 @@ export const navbarData: NavbarData = {
     label: "Get Started",
     href: "/",
   },
+  featuredData: [
+    {
+      imgUrl: "/img/cryo.jpeg",
+      title: "Blog Title",
+      subTitle:
+        "Lorem ipsum dolor sit amet consectetur. Nunc tincidunt pretium ut duis rhoncus. Et pulvinar aliquam malesuada eu praesent  quam quam. ",
+      blogUrl: "/",
+    },
+    {
+      imgUrl: "/img/cryo.jpeg",
+      title: "Blog Title",
+      subTitle:
+        "Lorem ipsum dolor sit amet consectetur. Nunc tincidunt pretium ut duis rhoncus. Et pulvinar aliquam malesuada eu praesent  quam quam. ",
+      blogUrl: "/",
+    },
+  ],
   justifyContent: "center",
 };
-
-export const featuredData: FeaturedData[] = [
-  {
-    imgUrl: "/img/cryo.jpeg",
-    title: "Blog Title",
-    subTitle:
-      "Lorem ipsum dolor sit amet consectetur. Nunc tincidunt pretium ut duis rhoncus. Et pulvinar aliquam malesuada eu praesent  quam quam. ",
-    blogUrl: "/",
-  },
-  {
-    imgUrl: "/img/cryo.jpeg",
-    title: "Blog Title",
-    subTitle:
-      "Lorem ipsum dolor sit amet consectetur. Nunc tincidunt pretium ut duis rhoncus. Et pulvinar aliquam malesuada eu praesent  quam quam. ",
-    blogUrl: "/",
-  },
-];

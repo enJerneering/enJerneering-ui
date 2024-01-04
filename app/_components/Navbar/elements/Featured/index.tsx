@@ -9,16 +9,15 @@ interface HeaderActionProps {
   data: FeaturedData[];
 }
 
-const Featured: React.FC<HeaderActionProps> = ({ data }) => {
-  const BlogItem = ({ item }: { item: FeaturedData }): JSX.Element => (
-    <div className="flex gap-4">
+const BlogItem = ({ item }: { item: FeaturedData; }): JSX.Element => (
+  <a href={item.blogUrl} className="text-xs font-medium text-neutral-500">
+    <div className="flex gap-4 hover:bg-gray-200 p-2 rounded-md">
       <Image
         width={160}
         height={529}
         src={item.imgUrl}
         alt="blog"
-        className="object-cover object-center mx-auto rounded-2xl"
-      />
+        className="object-cover object-center mx-auto rounded-2xl" />
       <div className="flex flex-col gap-2 flex-1">
         <span className="text-base font-bold text-neutral-800">
           {item.title}
@@ -26,15 +25,16 @@ const Featured: React.FC<HeaderActionProps> = ({ data }) => {
         <span className="text-sm font-normal text-neutral-500">
           {item.subTitle}
         </span>
-        <a href={item.blogUrl} className="text-xs font-medium text-neutral-500">
-          Read more
-        </a>
+        Read more
       </div>
     </div>
-  );
+  </a>
 
+);
+
+const Featured: React.FC<HeaderActionProps> = ({ data }) => {
   return (
-    <div className="flex flex-col gap-4 px-10 py-6 bg-nav-100 ">
+    <div className="flex flex-col gap-4 px-10 py-6 bg-nav-100">
       <span className="text-sm font-normal text-neutral-500">Featured</span>
       {data.map((item, index) => (
         <BlogItem item={item} key={index} />

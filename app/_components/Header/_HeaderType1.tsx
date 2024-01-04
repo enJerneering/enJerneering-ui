@@ -19,7 +19,7 @@ const HeaderType1: React.FC<HeaderProps> = ({ data }) => {
   } = data;
 
   return (
-    <div className="bg-white m-h-[624px]">
+    <div className="bg-gray-50 m-h-[624px]">
       <div className="mx-auto max-w-[960px] py-20 px-6 gap-10  md:flex lg:items-center lg:justify-center lg:gap-16">
         <div className="mt-10 flex flex-col items-center justify-center gap-10 lg:mt-0 lg:h-full">
           <div className="flex flex-col gap-10 text-center">
