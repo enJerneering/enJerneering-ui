@@ -4,6 +4,6 @@ export function windowOpen(url: string) {
   }
 }
 
-export function classNames(...classes: string[]): string {
+export function classNames(...classes: any): string {
   return classes.filter(Boolean).join(" ");
 }

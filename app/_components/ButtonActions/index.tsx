@@ -4,14 +4,14 @@ import React from "react";
 import useRedirect from "@/_hooks/useRedirect";
 import Button from "@/_components/Button";
 
-interface HeaderActionProps {
+interface ButtonActionsProps {
   primaryLabel: string;
   secondaryLabel: string;
   primaryUrl: string;
   secondaryUrl: string;
 }
 
-const HeaderAction: React.FC<HeaderActionProps> = ({
+const ButtonActions: React.FC<ButtonActionsProps> = ({
   primaryLabel,
   secondaryLabel,
   primaryUrl,
@@ -35,4 +35,4 @@ const HeaderAction: React.FC<HeaderActionProps> = ({
   );
 };
 
-export default HeaderAction;
+export default ButtonActions;

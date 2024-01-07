@@ -2,7 +2,8 @@
 import { getBaseUrl } from "@lib/meta";
 import { Metadata } from "next";
 import Header from "./_components/Header";
-import { seo, headerType, headerData } from "./pageData";
+import { seo, headerType, headerData, ctaType, ctaData } from "./pageData";
+import CallToAction from "./_components/CallToAction";
 
 export const metadata: Metadata = {
   title: seo.title,
@@ -16,6 +17,7 @@ export default function Home() {
   return (
     <div>
       <Header type={headerType} data={headerData} />
+      <CallToAction type={ctaType} data={ctaData} />
     </div>
   );
 }
