@@ -13,7 +13,7 @@ export const seo: Metadata = {
 };
 
 // Header
-export const headerType = 1;
+export const headerType = 3;
 export const headerData: HeaderData = {
   title: "enJerneering UI Kit",
   subtitle: "A collection of React components for enJerneering projects",

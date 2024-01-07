@@ -37,11 +37,11 @@ const CallToActionType3: React.FC<CallToActionProps> = ({ data }) => {
       >
         <div className="flex flex-col gap-10 w-full lg:h-full lg:w-1/2 px-6 py-20 lg:p-20 bg-neutral-800">
           <div className="flex flex-col gap-6 text-left">
-            <span className="text-base uppercase font-bold text-neutral-500">
+            <span className="text-base uppercase font-bold text-neutral-400">
               {tagLine}
             </span>
             <h1 className="text-5xl leading-h4 text-gray-50">{title}</h1>
-            <h6 className="leading-6">{subtitle}</h6>
+            <h6 className="leading-6 text-neutral-400">{subtitle}</h6>
           </div>
 
           <ButtonActions

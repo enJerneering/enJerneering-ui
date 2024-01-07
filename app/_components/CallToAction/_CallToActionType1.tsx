@@ -43,7 +43,7 @@ const CallToActionType1: React.FC<CallToActionProps> = ({ data }) => {
         <div className="mt-10 flex flex-col items-center justify-center gap-10 lg:mt-0 lg:h-full">
           <div className="flex flex-col gap-6 text-center">
             {tagLine && (
-              <span className="text-neutral-500 text-base uppercase font-bold">
+              <span className="text-neutral-400 text-base uppercase font-bold">
                 {tagLine}
               </span>
             )}
