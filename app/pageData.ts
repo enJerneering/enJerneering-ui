@@ -145,3 +145,19 @@ export const navbarData: NavbarData = {
   ],
   justifyContent: "center",
 };
+
+// Call to action
+export const ctaType = 1;
+
+export const ctaData: HeaderData = {
+  title: "Medium length CTA goes here",
+  subtitle:
+    "Lorem ipsum dolor sit amet consectetur. Nunc tincidunt pretium ut duis rhoncus. Et pulvinar aliquam malesuada eu praesent quam quam.",
+  primaryLabel: "Get Started",
+  secondaryLabel: "Live Demo",
+  tagLine: "enJerneering - Innovate Beyond",
+  primaryUrl: "/",
+  secondaryUrl: "/",
+  imgUrl: "/img/bg-contact.png",
+  isRowReverse: false,
+};

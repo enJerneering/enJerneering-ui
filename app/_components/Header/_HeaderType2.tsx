@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import Image from 'next/image';
-import HeaderAction from "./elements/HeaderAction";
+import Image from "next/image";
+import ButtonActions from "../ButtonActions";
 import { HeaderData } from "./types/HeaderData";
 
 interface HeaderProps {
@@ -21,7 +21,7 @@ const HeaderType2: React.FC<HeaderProps> = ({ data }) => {
   } = data;
 
   return (
-    <div className="bg-gray-50 m-h-[624px] relative">
+    <div className="bg-gray-50 relative">
       <div className="absolute inset-0 z-0">
         <Image
           src={imgUrl}
@@ -31,17 +31,18 @@ const HeaderType2: React.FC<HeaderProps> = ({ data }) => {
           alt="Background Image"
         />
         {/* Tint Overlay */}
-        <div className="absolute inset-0 bg-gray-500 opacity-50"></div> {/* Gray tint */}
+        <div className="absolute inset-0 bg-gray-500 opacity-50"></div>
+        {/* Gray tint */}
       </div>
 
-      <div className="mx-auto max-w-[960px] py-20 px-6 gap-10 md:flex lg:items-center lg:justify-center lg:gap-16 z-10 relative">
+      <div className="mx-auto max-w-[960px] min-h-[624px] py-20 px-6 gap-10 md:flex lg:items-center lg:justify-center lg:gap-16 z-10 relative">
         <div className="mt-10 flex flex-col items-center justify-center gap-10 lg:mt-0 lg:h-full">
           <div className="flex flex-col gap-10 text-center">
             <h1 className="text-white">{title}</h1>
             <h6 className="text-white">{subtitle}</h6>
           </div>
 
-          <HeaderAction
+          <ButtonActions
             primaryLabel={primaryLabel}
             secondaryLabel={secondaryLabel}
             primaryUrl={primaryUrl}

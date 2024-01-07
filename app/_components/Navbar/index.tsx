@@ -88,7 +88,7 @@ const MobileNavBar = ({
       <div className="mt-6 flow-root">
         <div className="-my-6 divide-y divide-gray-500/10">
           <div className="space-y-2 py-6">
-            {menuList.map((menuItem, menuIndex) => (
+            {menuList.map((menuItem, menuIndex) =>
               menuItem.subLinks ? (
                 <SubLink
                   type={type}
@@ -106,7 +106,7 @@ const MobileNavBar = ({
                   {menuItem.title}
                 </a>
               )
-            ))}
+            )}
           </div>
           <div className="py-6">
             <ActionButton label={ctaButton.label} href={ctaButton.href} />
@@ -125,12 +125,12 @@ const Navbar: React.FC<NavbarProps> = ({ type, data }) => {
   return (
     <header className="bg-gray-50 z-50 relative">
       <nav
-        className="mx-auto flex max-w-7xl items-center justify-between gap-20 pt-4 pb-5 lg:px-3 sm:px-6 px-6"
+        className="mx-auto flex max-w-7xl items-center justify-between gap-10 pt-4 pb-5 lg:gap-20 lg:px-3 sm:px-6 px-6"
         aria-label="Global"
       >
         <Logo logo={logo} />
 
-        <div className="flex items-center gap-2 lg:hidden">
+        <div className="flex flex-shrink-0 items-center gap-2 lg:hidden">
           <ActionButton label={ctaButton.label} href={ctaButton.href} />
           <BarIcon onClick={() => setMobileMenuOpen(true)} />
         </div>
@@ -140,7 +140,7 @@ const Navbar: React.FC<NavbarProps> = ({ type, data }) => {
             justifyContent ? `justify-${justifyContent}` : "justify-start"
           )}
         >
-          {menuList.map((menuItem, menuIndex) => (
+          {menuList.map((menuItem, menuIndex) =>
             menuItem.subLinks ? (
               <SubLink
                 type={type}
@@ -158,7 +158,7 @@ const Navbar: React.FC<NavbarProps> = ({ type, data }) => {
                 {menuItem.title}
               </a>
             )
-          ))}
+          )}
         </Popover.Group>
         <div className="hidden lg:flex lg:justify-end">
           <ActionButton label={ctaButton.label} href={ctaButton.href} />

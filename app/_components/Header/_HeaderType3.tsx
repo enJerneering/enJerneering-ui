@@ -3,15 +3,12 @@
 import React from "react";
 import ModalVideo from "../ModalVideo";
 import type { StaticImageData } from "next/image";
-import HeaderAction from "./elements/HeaderAction";
+import ButtonActions from "../ButtonActions";
 import { HeaderData } from "./types/HeaderData";
+import { classNames } from "@/_utils/helpers";
 
 interface HeaderProps {
   data: HeaderData;
-}
-
-function classNames(...classes: any) {
-  return classes.filter(Boolean).join(" ");
 }
 
 const HeaderType3: React.FC<HeaderProps> = ({ data }) => {
@@ -29,13 +26,11 @@ const HeaderType3: React.FC<HeaderProps> = ({ data }) => {
   } = data;
 
   return (
-    <div className="bg-gray-50 m-h-[624px]">
+    <div className="bg-gray-50">
       <div
         className={classNames(
-          "mx-auto max-w-[1440px] px-6 py-20 gap-10 lg:p-20 lg:flex lg:items-center lg:justify-between lg:gap-20",
-          {
-            "lg:flex-row-reverse": isRowReverse,
-          }
+          isRowReverse ? "lg:flex-row-reverse" : "",
+          "mx-auto max-w-[1440px] min-h-[624px] px-6 py-20 gap-10 lg:p-20 lg:flex lg:items-center lg:justify-between lg:gap-20"
         )}
       >
         <div className="flex flex-col gap-10 w-full lg:h-full lg:w-1/2">
@@ -45,14 +40,14 @@ const HeaderType3: React.FC<HeaderProps> = ({ data }) => {
             <h6>{subtitle}</h6>
           </div>
 
-          <HeaderAction
+          <ButtonActions
             primaryLabel={primaryLabel}
             secondaryLabel={secondaryLabel}
             primaryUrl={primaryUrl}
             secondaryUrl={secondaryUrl}
           />
         </div>
-        <div className="mt-10 lg:h-full lg:w-1/2">
+        <div className="mt-10 lg:h-full lg:w-1/2 lg:mt-0">
           <ModalVideo
             thumb={imgUrl as unknown as StaticImageData}
             thumbWidth={600}

@@ -5,7 +5,7 @@ import { FeaturedData } from "../../types/NavbarData";
 import Image from "next/image";
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
 
-interface HeaderActionProps {
+interface ButtonActionsProps {
   data: FeaturedData[];
 }
 
@@ -32,7 +32,7 @@ const BlogItem = ({ item }: { item: FeaturedData; }): JSX.Element => (
 
 );
 
-const Featured: React.FC<HeaderActionProps> = ({ data }) => {
+const Featured: React.FC<ButtonActionsProps> = ({ data }) => {
   return (
     <div className="flex flex-col gap-4 px-10 py-6 bg-nav-100">
       <span className="text-sm font-normal text-neutral-500">Featured</span>
