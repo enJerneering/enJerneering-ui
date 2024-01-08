@@ -31,14 +31,14 @@ const FooterType3: React.FC<FooterProps> = ({ data }) => {
         </h2>
         <div className="">
           <div className="flex flex-col gap-8 px-6 py-10 lg:px-20 xl:flex-row xl:gap-20">
-            <div className="flex flex-col space-y-6 flex-shrink-0 xl:max-w-[400px] pb-6 border-b xl:border-r xl:border-b-0 xl:pr-20 border-neutral-800/10">
+            <div className="flex flex-col space-y-6 flex-shrink-0 xl:max-w-[480px] pb-6 border-b xl:border-r xl:border-b-0 xl:pr-20 border-neutral-800/10">
               <Image src={logo} alt="Logo" width={230} height={48} />
               <p className="text-base font-normal text-neutral-500">{slogan}</p>
               <p className="text-base font-normal text-neutral-500">
                 &copy; {year}. Powered by {companyName}.
               </p>
             </div>
-            <div className="flex-1 grid grid-cols-2 md:grid-cols-3 xl:col-span-3 gap-8">
+            <div className="flex-1 grid grid-cols-2 xl:col-span-3 gap-8">
               {Object.entries(groupedNavigation).map(
                 ([pageGroup, navigation], index) => (
                   <div key={index}>

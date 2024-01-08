@@ -168,11 +168,12 @@ export const ctaData: HeaderData = {
 
 // Footer
 
-export const footerType = 1;
+export const footerType = 3;
 
 export const footerData: FooterData = {
   logo: "/img/enJerneering_black.png",
-  slogan: "enJerneering - Innovate Beyond",
+  slogan:
+    "Lorem ipsum dolor sit amet consectetur. Nunc tincidunt pretium ut duis rhoncus. Et pulvinar aliquam malesuada.",
   socials: [
     {
       name: "linkedin",

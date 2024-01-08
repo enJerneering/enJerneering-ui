@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import React from "react";
@@ -24,18 +25,14 @@ const CallToActionType3: React.FC<CallToActionProps> = ({ data }) => {
   } = data;
 
   return (
-    <div
-      className={classNames(
-        "mx-auto lg:flex lg:items-center lg:justify-between"
-      )}
-    >
+    <div className="mx-auto lg:flex lg:items-center lg:justify-between">
       <div
         className={classNames(
           isRowReverse ? "lg:flex-row-reverse" : "",
-          "lg:flex flex-1 h-full"
+          "md:grid md:grid-cols-2 min-h-[464px]"
         )}
       >
-        <div className="flex flex-col gap-10 w-full lg:h-full lg:w-1/2 px-6 py-20 lg:p-20 bg-neutral-800">
+        <div className="flex flex-col justify-center gap-10 w-full lg:h-full  px-6 py-20 lg:p-20 bg-neutral-800">
           <div className="flex flex-col gap-6 text-left">
             <span className="text-base uppercase font-bold text-neutral-500">
               {tagLine}
@@ -52,17 +49,14 @@ const CallToActionType3: React.FC<CallToActionProps> = ({ data }) => {
           />
         </div>
 
-        <div className="min-h-[464px] lg:w-1/2 lg:mt-0 relative">
-          <div className="absolute inset-0 z-0">
-            <Image
-              alt="CTA Image"
-              src={imgUrl}
-              quality={100}
-              layout="fill"
-              objectFit="cover"
-            />
-          </div>
-        </div>
+        <img
+          alt="CTA Image"
+          src={imgUrl}
+          className={classNames(
+            isRowReverse ? "row-start-1" : "",
+            "w-full object-cover md:h-full order-1"
+          )}
+        />
       </div>
     </div>
   );
