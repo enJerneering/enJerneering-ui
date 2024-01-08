@@ -4,6 +4,7 @@ import {
   FeaturedData,
   NavbarData,
 } from "./_components/Navbar/types/NavbarData";
+import { FooterData } from "./_components/Footer/types/FooterData";
 
 // Search Engine Optimization
 export const seo: Metadata = {
@@ -11,6 +12,9 @@ export const seo: Metadata = {
   description: "A collection of React components for enJerneering projects",
   keywords: "enJerneering, React, UI Kit, Components, NextJS",
 };
+
+export const year = new Date().getFullYear();
+export const companyName = "enJerneering";
 
 // Header
 export const headerType = 1;
@@ -160,4 +164,79 @@ export const ctaData: HeaderData = {
   secondaryUrl: "/",
   imgUrl: "/img/bg-contact.png",
   isRowReverse: false,
+};
+
+// Footer
+
+export const footerType = 1;
+
+export const footerData: FooterData = {
+  logo: "/img/enJerneering_black.png",
+  slogan: "enJerneering - Innovate Beyond",
+  socials: [
+    {
+      name: "linkedin",
+      url: "/",
+      icon: "pi-linkedin",
+    },
+    {
+      name: "github",
+      url: "/",
+      icon: "pi-github",
+    },
+    {
+      name: "instagram",
+      url: "/",
+      icon: "pi-instagram",
+    },
+    {
+      name: "facebook",
+      url: "/",
+      icon: "pi-facebook",
+    },
+  ],
+  navigation: [
+    {
+      title: "Page 1",
+      href: "/",
+      pageGroup: "Page group 1",
+    },
+    {
+      title: "Page 2",
+      href: "/",
+      pageGroup: "Page group 1",
+    },
+    {
+      title: "Page 3",
+      href: "/",
+      pageGroup: "Page group 1",
+    },
+    {
+      title: "Page 4",
+      href: "/",
+      pageGroup: "Page group 2",
+    },
+    {
+      title: "Page 5",
+      href: "/",
+      pageGroup: "Page group 2",
+    },
+    {
+      title: "Page 6",
+      href: "/",
+      pageGroup: "Page group 3",
+    },
+    {
+      title: "Page 7",
+      href: "/",
+      pageGroup: "Page group 3",
+    },
+  ],
+  polices: [
+    { title: "Privacy Policy", url: "/" },
+    { title: "Terms & Conditions", url: "/" },
+    { title: "Legal Information", url: "/" },
+  ],
+  ctaButtonLabel: "Submit",
+  ctaButtonUrl: "/",
 };
