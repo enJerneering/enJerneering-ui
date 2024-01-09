@@ -5,6 +5,7 @@ import {
   NavbarData,
 } from "./_components/Navbar/types/NavbarData";
 import { FooterData } from "./_components/Footer/types/FooterData";
+import { TeamSectionData } from "./_components/TeamSection/types/TeamSectionData";
 
 // Search Engine Optimization
 export const seo: Metadata = {
@@ -240,4 +241,126 @@ export const footerData: FooterData = {
   ],
   ctaButtonLabel: "Submit",
   ctaButtonUrl: "/",
+};
+
+// Team Section
+export const teamSectionType = 3;
+
+export const teamSectionData: TeamSectionData = {
+  description:
+    "Lorem ipsum dolor sit amet consectetur. Nunc tincidunt pretium ut duis rhoncus. Et pulvinar aliquam malesuada.",
+  people: [
+    {
+      name: "Emma Dorsey",
+      role: "Senior Developer",
+      imageUrl: "/img/team.png",
+      bio: "Praesentium iure error aliquam voluptas ut libero. Commodi placeat sit iure nulla officiis. Ut ex sit repellat tempora.",
+      socials: [
+        {
+          name: "linkedin",
+          url: "/",
+          icon: "pi-linkedin",
+        },
+        {
+          name: "github",
+          url: "/",
+          icon: "pi-github",
+        },
+        {
+          name: "instagram",
+          url: "/",
+          icon: "pi-instagram",
+        },
+        {
+          name: "facebook",
+          url: "/",
+          icon: "pi-facebook",
+        },
+      ],
+    },
+    {
+      name: "Emma Dorsey",
+      role: "Senior Developer",
+      imageUrl: "/img/team.png",
+      bio: "Praesentium iure error aliquam voluptas ut libero. Commodi placeat sit iure nulla officiis. Ut ex sit repellat tempora.",
+      socials: [
+        {
+          name: "linkedin",
+          url: "/",
+          icon: "pi-linkedin",
+        },
+        {
+          name: "github",
+          url: "/",
+          icon: "pi-github",
+        },
+        {
+          name: "instagram",
+          url: "/",
+          icon: "pi-instagram",
+        },
+        {
+          name: "facebook",
+          url: "/",
+          icon: "pi-facebook",
+        },
+      ],
+    },
+    {
+      name: "Emma Dorsey",
+      role: "Senior Developer",
+      imageUrl: "/img/team.png",
+      bio: "Praesentium iure error aliquam voluptas ut libero. Commodi placeat sit iure nulla officiis. Ut ex sit repellat tempora.",
+      socials: [
+        {
+          name: "linkedin",
+          url: "/",
+          icon: "pi-linkedin",
+        },
+        {
+          name: "github",
+          url: "/",
+          icon: "pi-github",
+        },
+        {
+          name: "instagram",
+          url: "/",
+          icon: "pi-instagram",
+        },
+        {
+          name: "facebook",
+          url: "/",
+          icon: "pi-facebook",
+        },
+      ],
+    },
+    {
+      name: "Emma Dorsey",
+      role: "Senior Developer",
+      imageUrl: "/img/team.png",
+      bio: "Praesentium iure error aliquam voluptas ut libero. Commodi placeat sit iure nulla officiis. Ut ex sit repellat tempora.",
+      socials: [
+        {
+          name: "linkedin",
+          url: "/",
+          icon: "pi-linkedin",
+        },
+        {
+          name: "github",
+          url: "/",
+          icon: "pi-github",
+        },
+        {
+          name: "instagram",
+          url: "/",
+          icon: "pi-instagram",
+        },
+        {
+          name: "facebook",
+          url: "/",
+          icon: "pi-facebook",
+        },
+      ],
+    },
+  ],
 };
