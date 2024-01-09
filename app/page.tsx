@@ -2,8 +2,17 @@
 import { getBaseUrl } from "@lib/meta";
 import { Metadata } from "next";
 import Header from "./_components/Header";
-import { seo, headerType, headerData, ctaType, ctaData } from "./pageData";
+import {
+  seo,
+  headerType,
+  headerData,
+  ctaType,
+  ctaData,
+  teamSectionType,
+  teamSectionData,
+} from "./pageData";
 import CallToAction from "./_components/CallToAction";
+import TeamSection from "./_components/TeamSection";
 
 export const metadata: Metadata = {
   title: seo.title,
@@ -18,6 +27,7 @@ export default function Home() {
     <div>
       <Header type={headerType} data={headerData} />
       <CallToAction type={ctaType} data={ctaData} />
+      <TeamSection type={teamSectionType} data={teamSectionData} />
     </div>
   );
 }
