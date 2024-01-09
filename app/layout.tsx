@@ -6,7 +6,7 @@ import Footer from "@components/Footer";
 import BackgroundImage from "@components/BackgroundImage"; // Assuming BackgroundImage is at @components folder
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { navbarData, navbarType } from "./pageData";
+import { footerData, footerType, navbarData, navbarType } from "./pageData";
 
 const roboto = Roboto({
   weight: "700",
@@ -28,7 +28,7 @@ export default function RootLayout({
           <Navbar type={navbarType} data={navbarData} />
         </div>
         <main className="flex-grow mt-[86px] relative">{children}</main>
-        <Footer />
+        <Footer type={footerType} data={footerData} />
       </body>
     </html>
   );
