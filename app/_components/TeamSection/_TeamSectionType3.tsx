@@ -14,7 +14,7 @@ const TeamSectionType3: React.FC<TeamSectionProps> = ({ data }) => {
 
   return (
     <div className="bg-gray-50">
-      <div className="mx-auto px-6 py-20 lg:p-20">
+      <div className="mx-auto max-w-[1440px] px-6 py-20 lg:p-20">
         <div className="mx-auto w-full lg:mx-0 text-center">
           <h2 className="text-3xl font-bold tracking-tight text-neutral-800 sm:text-4xl">
             Meet our team
@@ -23,7 +23,7 @@ const TeamSectionType3: React.FC<TeamSectionProps> = ({ data }) => {
         </div>
         <ul
           role="list"
-          className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-8 sm:grid-cols-2 lg:mx-0 lg:max-w-none xl:col-span-2"
+          className="mx-auto mt-10 grid max-w-screen-xl grid-cols-1 gap-8 sm:grid-cols-2 lg:mx-0 lg:max-w-none xl:col-span-2"
         >
           {people.map((person) => (
             <li
@@ -31,7 +31,7 @@ const TeamSectionType3: React.FC<TeamSectionProps> = ({ data }) => {
               className="flex flex-col gap-6 xl:flex-row bg-neutral-100 rounded-xl"
             >
               <img
-                className="aspect-[3/2] w-[300px] rounded-2xl object-cover"
+                className="aspect-[3/2] min-w-[300px] rounded-2xl object-cover"
                 src={person.imageUrl}
                 alt=""
               />

@@ -34,7 +34,7 @@ const FooterType2: React.FC<FooterProps> = ({ data }) => {
   });
 
   return (
-    <div className="z-30">
+    <div className="z-30 bg-gray-50">
       <footer aria-labelledby="footer-heading">
         <h2 id="footer-heading" className="sr-only">
           Footer

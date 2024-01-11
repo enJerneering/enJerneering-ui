@@ -14,7 +14,7 @@ const TeamSectionType2: React.FC<TeamSectionProps> = ({ data }) => {
 
   return (
     <div className="bg-gray-50">
-      <div className="mx-auto px-6 py-20 lg:p-20">
+      <div className="mx-auto max-w-[1440px] px-6 py-20 lg:p-20">
         <div className="mx-auto w-full lg:mx-0 text-center">
           <h2 className="text-3xl font-bold tracking-tight text-neutral-800 sm:text-4xl">
             Meet our team
@@ -23,7 +23,7 @@ const TeamSectionType2: React.FC<TeamSectionProps> = ({ data }) => {
         </div>
         <ul
           role="list"
-          className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-6 sm:grid-cols-2 lg:mx-0 lg:max-w-none xl:grid-cols-4"
+          className="mx-auto mt-10 grid max-w-screen-xl grid-cols-1 gap-6 sm:grid-cols-2 lg:mx-0 lg:max-w-none xl:grid-cols-4"
         >
           {people.map((person) => (
             <li
