@@ -39,8 +39,8 @@ const CallToActionType1: React.FC<CallToActionProps> = ({ data }) => {
         </div>
       )}
 
-      <div className="mx-auto max-w-[960px] py-20 px-6 gap-10  md:flex lg:items-center lg:justify-center lg:gap-16 relative">
-        <div className="mt-10 flex flex-col items-center justify-center gap-10 lg:mt-0 lg:h-full">
+      <div className="mx-auto max-w-[1440px] py-20 px-6 gap-10 lg:p-20 md:flex lg:items-center lg:justify-center lg:gap-10 relative">
+        <div className="mx-auto max-w-screen-xl mt-10 flex flex-col items-center justify-center gap-10 lg:mt-0 lg:h-full">
           <div className="flex flex-col gap-6 text-center">
             {tagLine && (
               <span className="text-neutral-400 text-base uppercase font-bold">

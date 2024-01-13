@@ -6,6 +6,8 @@ import {
 } from "./_components/Navbar/types/NavbarData";
 import { FooterData } from "./_components/Footer/types/FooterData";
 import { TeamSectionData } from "./_components/TeamSection/types/TeamSectionData";
+import { ContactData } from "./_components/Contact/types/ContactData";
+import { mapSrc } from "./_constant/app";
 
 // Search Engine Optimization
 export const seo: Metadata = {
@@ -363,4 +365,22 @@ export const teamSectionData: TeamSectionData = {
       ],
     },
   ],
+};
+
+// Contact
+
+export const contactType = 5;
+export const contactData: ContactData = {
+  title: "Contact Us",
+  subtitle:
+    "Lorem ipsum dolor sit amet consectetur. Nunc tincidunt pretium ut duis rhoncus. Et pulvinar aliquam malesuada.",
+  phone: "+123456789",
+  mail: "contact@enjerneering.com",
+  address: "5333 Avenue Casgrain #1201 Montréal, QC H2T 1X3",
+  phoneLabel: "Lorem ipsum dolor sit amet consectetur.",
+  mailLabel: "Lorem ipsum dolor sit amet consectetur.",
+  addressLabel: "Lorem ipsum dolor sit amet consectetur.",
+  primaryLabel: "Send message",
+  imgUrl: "/img/bg-contact.png",
+  mapSrc: mapSrc,
 };

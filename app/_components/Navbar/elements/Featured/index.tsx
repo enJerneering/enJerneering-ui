@@ -5,11 +5,11 @@ import { FeaturedData } from "../../types/NavbarData";
 import Image from "next/image";
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
 
-interface ButtonActionsProps {
+interface FeaturedProps {
   data: FeaturedData[];
 }
 
-const BlogItem = ({ item }: { item: FeaturedData; }): JSX.Element => (
+const BlogItem = ({ item }: { item: FeaturedData }): JSX.Element => (
   <a href={item.blogUrl} className="text-xs font-medium text-neutral-500">
     <div className="flex gap-4 hover:bg-gray-200 p-2 rounded-md">
       <Image
@@ -17,7 +17,8 @@ const BlogItem = ({ item }: { item: FeaturedData; }): JSX.Element => (
         height={529}
         src={item.imgUrl}
         alt="blog"
-        className="object-cover object-center mx-auto rounded-2xl" />
+        className="object-cover object-center mx-auto rounded-2xl"
+      />
       <div className="flex flex-col gap-2 flex-1">
         <span className="text-base font-bold text-neutral-800">
           {item.title}
@@ -29,10 +30,9 @@ const BlogItem = ({ item }: { item: FeaturedData; }): JSX.Element => (
       </div>
     </div>
   </a>
-
 );
 
-const Featured: React.FC<ButtonActionsProps> = ({ data }) => {
+const Featured: React.FC<FeaturedProps> = ({ data }) => {
   return (
     <div className="flex flex-col gap-4 px-10 py-6 bg-nav-100">
       <span className="text-sm font-normal text-neutral-500">Featured</span>

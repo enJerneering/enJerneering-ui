@@ -35,8 +35,8 @@ const HeaderType2: React.FC<HeaderProps> = ({ data }) => {
         {/* Gray tint */}
       </div>
 
-      <div className="mx-auto max-w-[960px] min-h-[624px] py-20 px-6 gap-10 md:flex lg:items-center lg:justify-center lg:gap-16 z-10 relative">
-        <div className="mt-10 flex flex-col items-center justify-center gap-10 lg:mt-0 lg:h-full">
+      <div className="mx-auto max-w-[1440px] min-h-[624px] h-full py-20 px-6 flex gap-10 items-center justify-center lg:gap-16 z-10 relative">
+        <div className="mt-10 w-full flex flex-col items-center justify-center gap-10 lg:mt-0 lg:h-full">
           <div className="flex flex-col gap-10 text-center">
             <h1 className="text-white">{title}</h1>
             <h6 className="text-white">{subtitle}</h6>

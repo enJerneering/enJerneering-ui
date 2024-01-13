@@ -22,7 +22,7 @@ const CallToActionType2: React.FC<CallToActionProps> = ({ data }) => {
   } = data;
 
   return (
-    <div className="bg-neutral-800 relative">
+    <div className="flex justify-center bg-neutral-800 relative">
       <div className="absolute inset-0 z-0">
         <Image
           src={imgUrl}
@@ -35,7 +35,7 @@ const CallToActionType2: React.FC<CallToActionProps> = ({ data }) => {
         <div className="absolute inset-0 bg-gray-500 opacity-50"></div>{" "}
         {/* Gray tint */}
       </div>
-      <div className="w-full px-6 py-20 lg:p-20 gap-6 md:flex lg:items-center lg:justify-start lg:gap-16 z-10 relative">
+      <div className="max-auto w-full max-w-[1440px] px-6 py-20 lg:p-20 gap-6 md:flex lg:items-center lg:justify-start lg:gap-16 z-10 relative">
         <div className="flex flex-col items-start justify-center gap-6 lg:mt-0 lg:h-full">
           <div className="flex flex-col gap-6">
             <span className="text-neutral-400 text-base uppercase font-bold">
