@@ -64,7 +64,7 @@ const ContactType5: React.FC<ContactProps> = ({ data }) => {
                     {mailLabel}
                   </span>
                   <span className="text-sm font-bold text-neutral-800">
-                    {mail}
+                    <a href={`mailto:${mail}`}>{mail}</a>
                   </span>
                 </div>
               </div>
@@ -81,7 +81,7 @@ const ContactType5: React.FC<ContactProps> = ({ data }) => {
                     {phoneLabel}
                   </span>
                   <span className="text-sm font-bold text-neutral-800">
-                    {phone}
+                    <a href={`tel:${phone}`}>{phone}</a>
                   </span>
                 </div>
               </div>

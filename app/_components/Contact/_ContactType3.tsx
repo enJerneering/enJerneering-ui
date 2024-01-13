@@ -47,7 +47,7 @@ const ContactType3: React.FC<ContactProps> = ({ data }) => {
                 <dd className="text-gray-50">
                   <a
                     className="hover:text-neutral-800"
-                    href="tel:+1 (555) 234-5678"
+                    href={`tel:${phone}`}
                   >
                     {phone}
                   </a>
@@ -62,7 +62,7 @@ const ContactType3: React.FC<ContactProps> = ({ data }) => {
                   />
                 </dt>
                 <dd className="text-gray-50">
-                  <a className="hover:text-neutral-800" href={mail}>
+                  <a className="hover:text-neutral-800" href={`mailto:${mail}`}>
                     {mail}
                   </a>
                 </dd>
