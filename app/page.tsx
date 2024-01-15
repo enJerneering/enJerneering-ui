@@ -31,11 +31,11 @@ export default function Home() {
 
   return (
     <div>
-      <Header type={headerType} data={headerData} />
+      <Header type={headerType} data={headerData} />      
+      <MainContent type={mainContentType} data={mainContentData} />
       <CallToAction type={ctaType} data={ctaData} />
       <TeamSection type={teamSectionType} data={teamSectionData} />
       <Contact type={contactType} data={contactData} />
-      <MainContent type={mainContentType} data={mainContentData} />
     </div>
   );
 }

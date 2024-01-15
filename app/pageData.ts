@@ -388,7 +388,7 @@ export const contactData: ContactData = {
 
 // Main Content
 
-export const mainContentType = 3;
+export const mainContentType = 1;
 export const mainContentData: MainContentData = {
   title: "Medium length hero heading goes here",
   subtitle:
