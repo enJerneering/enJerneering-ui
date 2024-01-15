@@ -12,10 +12,13 @@ import {
   teamSectionData,
   contactType,
   contactData,
+  mainContentType,
+  mainContentData,
 } from "./pageData";
 import CallToAction from "./_components/CallToAction";
 import TeamSection from "./_components/TeamSection";
 import Contact from "./_components/Contact";
+import MainContent from "./_components/MainContent";
 
 export const metadata: Metadata = {
   title: seo.title,
@@ -28,7 +31,8 @@ export default function Home() {
 
   return (
     <div>
-      <Header type={headerType} data={headerData} />
+      <Header type={headerType} data={headerData} />      
+      <MainContent type={mainContentType} data={mainContentData} />
       <CallToAction type={ctaType} data={ctaData} />
       <TeamSection type={teamSectionType} data={teamSectionData} />
       <Contact type={contactType} data={contactData} />

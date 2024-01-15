@@ -20,7 +20,7 @@
   }
 
   h5 {
-    @apply text-2xl leading-10 font-bold text-gray-900;
+    @apply text-2xl font-bold text-neutral-800;
   }
 
   h6 {
