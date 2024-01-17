@@ -9,6 +9,7 @@ import { TeamSectionData } from "./_components/TeamSection/types/TeamSectionData
 import { ContactData } from "./_components/Contact/types/ContactData";
 import { mapSrc } from "./_constant/app";
 import { MainContentData } from "./_components/MainContent/types/MainContentData";
+import { ServicesSectionData } from "./_components/ServicesSection/types/ServicesSectionData";
 
 // Search Engine Optimization
 export const seo: Metadata = {
@@ -426,4 +427,45 @@ export const mainContentData: MainContentData = {
     "/img/blogs/blog-detail-2.jpeg",
   ],
   videoUrl: "/videos/laser-resurfacing.mp4",
+};
+
+// Servives
+export const serviceType = 3;
+export const serviceData: ServicesSectionData = {
+  title: "Medium length hero heading goes here",
+  subtitle:
+    "Lorem ipsum dolor sit amet consectetur. Nunc tincidunt pretium ut duis rhoncus. Et pulvinar aliquam malesuada eu praesent ullamcorper quam quam. ",
+  tagLine: "enJerneering - Innovate Beyond",
+  subHeading: [
+    {
+      title: "Subheading 1",
+      subtitle: "Duis aute irure dolor in reprehenderit in voluptate velit.",
+      imageExtra: "/img/blogs/blog-1.jpeg",
+    },
+    {
+      title: "Subheading 2",
+      subtitle: "Duis aute irure dolor in reprehenderit in voluptate velit.",
+      imageExtra: "/img/blogs/blog-2.jpeg",
+    },
+    {
+      title: "Subheading 3",
+      subtitle: "Duis aute irure dolor in reprehenderit in voluptate velit.",
+      imageExtra: "/img/blogs/blog-3.jpeg",
+    },
+    {
+      title: "Subheading 4",
+      subtitle: "Duis aute irure dolor in reprehenderit in voluptate velit.",
+      imageExtra: "/img/blogs/blog-4.jpeg",
+    },
+    {
+      title: "Subheading 5",
+      subtitle: "Duis aute irure dolor in reprehenderit in voluptate velit.",
+      imageExtra: "/img/blogs/blog-detail-1.jpeg",
+    },
+    {
+      title: "Subheading 6",
+      subtitle: "Duis aute irure dolor in reprehenderit in voluptate velit.",
+      imageExtra: "/img/blogs/blog-detail-2.jpeg",
+    },
+  ],
 };
