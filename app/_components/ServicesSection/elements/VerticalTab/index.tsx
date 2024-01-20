@@ -25,7 +25,7 @@ const VerticalTab: React.FC<VerticalTabProps> = ({ data }) => {
             >
               <img
                 src={item.imageExtra}
-                className="h-[280px]"
+                className="h-[280px] object-cover"
                 alt="star-icon"
               />
             </div>

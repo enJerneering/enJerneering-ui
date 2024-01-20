@@ -16,12 +16,15 @@ import {
   mainContentData,
   serviceType,
   serviceData,
+  blogType,
+  blogData,
 } from "./pageData";
 import CallToAction from "./_components/CallToAction";
 import TeamSection from "./_components/TeamSection";
 import Contact from "./_components/Contact";
 import MainContent from "./_components/MainContent";
 import ServicesSection from "./_components/ServicesSection";
+import Blog from "./_components/Blog";
 
 export const metadata: Metadata = {
   title: seo.title,
@@ -40,6 +43,7 @@ export default function Home() {
       <TeamSection type={teamSectionType} data={teamSectionData} />
       <Contact type={contactType} data={contactData} />
       <ServicesSection type={serviceType} data={serviceData} />
+      <Blog type={blogType} data={blogData} />
     </div>
   );
 }

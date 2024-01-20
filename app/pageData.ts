@@ -10,6 +10,7 @@ import { ContactData } from "./_components/Contact/types/ContactData";
 import { mapSrc } from "./_constant/app";
 import { MainContentData } from "./_components/MainContent/types/MainContentData";
 import { ServicesSectionData } from "./_components/ServicesSection/types/ServicesSectionData";
+import { BlogData } from "./_components/Blog/types/BlogData";
 
 // Search Engine Optimization
 export const seo: Metadata = {
@@ -468,4 +469,60 @@ export const serviceData: ServicesSectionData = {
       imageExtra: "/img/blogs/blog-detail-2.jpeg",
     },
   ],
+};
+
+// Blog
+export const blogType = 3;
+export const blogData: BlogData = {
+  title: "Ours Blog",
+  subtitle:
+    "Lorem ipsum dolor sit amet consectetur. Nunc tincidunt pretium ut duis rhoncus. Lorem ipsum dolor sit amet consectetur.",
+  blogList: [
+    {
+      title: "Blog title heading goes here",
+      subtitle:
+        "Lorem ipsum dolor sit amet consectetur. Nunc tincidunt pretium ut duis rhoncus. Lorem ipsum dolor sit amet consectetur.",
+      category: "Technology",
+      thumbnailUrl: "/img/blogs/blog-1.jpeg",
+      publishedAt: "Jan 15, 2024",
+      timeRead: "16 min",
+      href: "/",
+      author: {
+        name: "Jerrod",
+        avatarUrl: "/img/team.png",
+        href: "/",
+      },
+    },
+    {
+      title: "Blog title heading goes here",
+      subtitle:
+        "Lorem ipsum dolor sit amet consectetur. Nunc tincidunt pretium ut duis rhoncus. Lorem ipsum dolor sit amet consectetur.",
+      category: "Technology",
+      thumbnailUrl: "/img/blogs/blog-1.jpeg",
+      publishedAt: "Jan 15, 2024",
+      timeRead: "16 min",
+      href: "/",
+      author: {
+        name: "Jerrod",
+        avatarUrl: "/img/team.png",
+        href: "/",
+      },
+    },
+    {
+      title: "Blog title heading goes here",
+      subtitle:
+        "Lorem ipsum dolor sit amet consectetur. Nunc tincidunt pretium ut duis rhoncus. Lorem ipsum dolor sit amet consectetur.",
+      category: "Technology",
+      thumbnailUrl: "/img/blogs/blog-1.jpeg",
+      publishedAt: "Jan 15, 2024",
+      timeRead: "16 min",
+      href: "/",
+      author: {
+        name: "Jerrod",
+        avatarUrl: "/img/team.png",
+        href: "/",
+      },
+    },
+  ],
+  isShowAuthor: true,
 };
