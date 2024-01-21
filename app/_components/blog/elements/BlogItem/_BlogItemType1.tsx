@@ -31,7 +31,7 @@ const BlogItemType1: React.FC<BlogItemProps> = ({ data, viewOptions }) => {
       } gap-4 bg-gray-50`}
     >
       <Link
-        className={`cursor-pointer ${
+        className={`${
           direction === "column"
             ? "w-full"
             : "flex-shrink-0 w-full xl:w-[298px]"
