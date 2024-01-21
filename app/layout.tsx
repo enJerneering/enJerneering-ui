@@ -3,7 +3,6 @@ import "./globals.css";
 import "primeicons/primeicons.css";
 import { Roboto } from "next/font/google";
 import Footer from "@components/Footer";
-import BackgroundImage from "@components/BackgroundImage"; // Assuming BackgroundImage is at @components folder
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { footerData, footerType, navbarData, navbarType } from "./pageData";

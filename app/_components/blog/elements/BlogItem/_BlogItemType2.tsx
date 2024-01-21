@@ -4,13 +4,14 @@
 import React from "react";
 import { BlogItem } from "../../types/BlogData";
 import { ChevronRightIcon } from "@heroicons/react/24/outline";
+import Link from "next/link";
 
 interface BlogItemProps {
   data: BlogItem;
 }
 
 const BlogItemType2: React.FC<BlogItemProps> = ({ data }) => {
-  const { title, subtitle, category, timeRead, author } = data;
+  const { title, subtitle, category, timeRead, author, href } = data;
 
   return (
     <div className="flex flex-col p-8 gap-4 bg-gray-50 rounded-2xl border-1 border-neutral-50 shadow">
@@ -25,12 +26,12 @@ const BlogItemType2: React.FC<BlogItemProps> = ({ data }) => {
             {timeRead} read
           </span>
         </div>
-        <div className="flex flex-col gap-2">
+        <Link className="flex flex-col gap-2" href={href}>
           <p className="text-xl font-semibold text-neutral-800">{title}</p>
           <span className="text-sm font-normal text-neutral-500">
             {subtitle}
           </span>
-        </div>
+        </Link>
         <div className="flex items-center justify-between">
           <div className="flex gap-3 items-center">
             <img
