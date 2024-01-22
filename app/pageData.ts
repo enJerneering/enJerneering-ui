@@ -9,7 +9,7 @@ import { TeamSectionData } from "./_components/TeamSection/types/TeamSectionData
 import { ContactData } from "./_components/Contact/types/ContactData";
 import { MainContentData } from "./_components/MainContent/types/MainContentData";
 import { ServicesSectionData } from "./_components/ServicesSection/types/ServicesSectionData";
-import { BlogData } from "./_components/blog/types/BlogData";
+import { BlogData } from "./_components/Blog/types/BlogData";
 
 // Search Engine Optimization
 export const seo: Metadata = {
@@ -158,7 +158,7 @@ export const navbarData: NavbarData = {
 };
 
 // Call to action
-export const ctaType = 2;
+export const ctaType = 3;
 
 export const ctaData: HeaderData = {
   title: "Medium length CTA goes here",
