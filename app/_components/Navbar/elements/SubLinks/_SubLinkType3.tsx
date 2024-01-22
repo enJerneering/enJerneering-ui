@@ -20,9 +20,12 @@ interface SubComponentProps {
 /**
  * SubLink component is used to render sub links in the navbar
  * @param param0 = { title, groupedSubLinks }
- * @returns 
+ * @returns
  */
-const SubLinkMobile: React.FC<SubComponentProps> = ({ title, groupedSubLinks }) => (
+const SubLinkMobile: React.FC<SubComponentProps> = ({
+  title,
+  groupedSubLinks,
+}) => (
   <Disclosure as="div" className="-mx-3">
     {({ open }) => (
       <>
@@ -64,9 +67,12 @@ const SubLinkMobile: React.FC<SubComponentProps> = ({ title, groupedSubLinks }) 
 /**
  * SubLink component is used to render sub links in the navbar
  * @param param0 = { title, groupedSubLinks }
- * @returns 
+ * @returns
  */
-const SubLinkWeb: React.FC<SubComponentProps> = ({ title, groupedSubLinks }) => (
+const SubLinkWeb: React.FC<SubComponentProps> = ({
+  title,
+  groupedSubLinks,
+}) => (
   <Popover>
     {({ open }) => (
       <>
@@ -80,7 +86,7 @@ const SubLinkWeb: React.FC<SubComponentProps> = ({ title, groupedSubLinks }) => 
             aria-hidden="true"
           />
         </Popover.Button>
-        <Popover.Panel className="absolute inset-x-0 top-0 mt-24 z-[1000] w-screen bg-gray-50 shadow-sm border border-gray-200">
+        <Popover.Panel className="absolute inset-x-0 top-0 mt-[86px] z-[1000] w-screen bg-gray-50 shadow-sm border border-gray-200">
           <div className="mx-auto grid grid-cols-4 gap-x-4 px-6 py-6 lg:px-10 xl:gap-x-20">
             {Object.entries(groupedSubLinks).map(
               ([pageGroup, subLinks], index) => (
@@ -90,7 +96,10 @@ const SubLinkWeb: React.FC<SubComponentProps> = ({ title, groupedSubLinks }) => 
                   </span>
                   <div className="flex flex-col gap-6">
                     {subLinks.map(({ title, subTitle, icon, href }) => (
-                      <div className="flex gap-2 hover:bg-gray-200 p-2 rounded-md" key={index}>
+                      <div
+                        className="flex gap-2 hover:bg-gray-200 p-2 rounded-md"
+                        key={index}
+                      >
                         {icon && <i className={classNames("pi", icon)}></i>}
                         <a
                           key={title}
@@ -122,7 +131,7 @@ const SubLinkWeb: React.FC<SubComponentProps> = ({ title, groupedSubLinks }) => 
 /**
  * SubLink component is used to render sub links in the navbar
  * @param param0 = { title, subLinks, isMobile }
- * @returns 
+ * @returns
  */
 const SubLinkType3: React.FC<HeaderProps> = ({ title, subLinks, isMobile }) => {
   const groupedSubLinks: { [key: string]: SubLink[] } = {};
@@ -135,13 +144,15 @@ const SubLinkType3: React.FC<HeaderProps> = ({ title, subLinks, isMobile }) => {
     groupedSubLinks[pageGroup].push(subLink);
   });
 
-  return <>
-    {isMobile ? (
-      <SubLinkMobile title={title} groupedSubLinks={groupedSubLinks} />
-    ) : (
-      <SubLinkWeb title={title} groupedSubLinks={groupedSubLinks} />
-    )}
-  </>;
+  return (
+    <>
+      {isMobile ? (
+        <SubLinkMobile title={title} groupedSubLinks={groupedSubLinks} />
+      ) : (
+        <SubLinkWeb title={title} groupedSubLinks={groupedSubLinks} />
+      )}
+    </>
+  );
 };
 
 export default SubLinkType3;
