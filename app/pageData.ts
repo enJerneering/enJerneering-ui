@@ -7,7 +7,6 @@ import {
 import { FooterData } from "./_components/Footer/types/FooterData";
 import { TeamSectionData } from "./_components/TeamSection/types/TeamSectionData";
 import { ContactData } from "./_components/Contact/types/ContactData";
-import { mapSrc } from "./_constant/app";
 import { MainContentData } from "./_components/MainContent/types/MainContentData";
 import { ServicesSectionData } from "./_components/ServicesSection/types/ServicesSectionData";
 import { BlogData } from "./_components/Blog/types/BlogData";
@@ -21,9 +20,11 @@ export const seo: Metadata = {
 
 export const year = new Date().getFullYear();
 export const companyName = "enJerneering";
+export const mapSrc =
+  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3046.674359781231!2d-85.40925552258973!3d40.21630607147254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88153d365781e4eb%3A0x90bb0a3a86aab047!2sReVitalize%20Med%20Spa!5e0!3m2!1sen!2sus!4v1694203487764!5m2!1sen!2sus";
 
 // Header
-export const headerType = 3;
+export const headerType = 2;
 export const headerData: HeaderData = {
   title: "enJerneering UI Kit",
   subtitle: "A collection of React components for enJerneering projects",
@@ -157,7 +158,7 @@ export const navbarData: NavbarData = {
 };
 
 // Call to action
-export const ctaType = 1;
+export const ctaType = 3;
 
 export const ctaData: HeaderData = {
   title: "Medium length CTA goes here",
@@ -372,7 +373,7 @@ export const teamSectionData: TeamSectionData = {
 
 // Contact
 
-export const contactType = 5;
+export const contactType = 3;
 export const contactData: ContactData = {
   title: "Contact Us",
   subtitle:
@@ -472,7 +473,7 @@ export const serviceData: ServicesSectionData = {
 };
 
 // Blog
-export const blogType = 3;
+export const blogType = 1;
 export const blogData: BlogData = {
   title: "Ours Blog",
   subtitle:

@@ -38,9 +38,9 @@ const MainContentType1: React.FC<MainContentProps> = ({ data }) => {
 
   return (
     <div className="bg-gray-50">
-      <div className="mx-auto max-w-[1440px] min-h-[624px] px-6 py-20 gap-10 lg:p-20 lg:flex lg:items-center lg:justify-between lg:gap-20">
+      <div className="mx-auto max-w-[1440px] min-h-[624px] px-6 py-20 gap-10 lg:p-20 flex items-center justify-between flex-col-reverse lg:flex-row lg:gap-20">
         <div
-          className="mx-auto max-w-screen-xl lg:mx-0 flex flex-col gap-10 w-full h-[466px] lg:w-1/2 rounded-2xl shadow-xl bg-cover bg-center"
+          className="mx-auto max-w-screen-xl lg:mx-0 flex flex-col gap-10 w-full h-[466px] lg:w-1/2 rounded-2xl lg:shadow-xl bg-cover bg-center"
           style={{ backgroundImage: `url(${imgUrl})` }}
         ></div>
         <div className="mx-auto max-w-screen-xl mt-10 lg:h-full lg:w-1/2 lg:mt-0">

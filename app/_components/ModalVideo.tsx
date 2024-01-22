@@ -38,7 +38,7 @@ export default function ModalVideo({
         aria-label="Watch the video"
       >
         <Image
-          className="rounded-3xl shadow-2xl transition-shadow duration-300 ease-in-out w-full"
+          className="rounded-3xl lg:shadow-2xl transition-shadow duration-300 ease-in-out w-full"
           src={thumb}
           width={thumbWidth}
           height={thumbHeight}

@@ -30,19 +30,20 @@ const BlogItemType1: React.FC<BlogItemProps> = ({ data, viewOptions }) => {
         direction === "column" ? "flex-col" : "flex-col xl:flex-row"
       } gap-4 bg-gray-50`}
     >
-      <div
+      <Link
         className={`${
           direction === "column"
             ? "w-full"
             : "flex-shrink-0 w-full xl:w-[298px]"
         }`}
+        href={href}
       >
         <img
           className="w-full h-full max-h-[320px] xl:max-h-[224px] rounded-2xl object-cover"
           src={thumbnailUrl}
           alt="blog-image"
         />
-      </div>
+      </Link>
       <div className="flex flex-col gap-4">
         <div className="flex gap-3 items-center">
           <div className="flex px-2 py-1 rounded-md bg-neutral-300">
@@ -56,12 +57,12 @@ const BlogItemType1: React.FC<BlogItemProps> = ({ data, viewOptions }) => {
             </span>
           )}
         </div>
-        <div className="flex flex-col gap-2">
+        <Link className="flex flex-col gap-2" href={href}>
           <p className="text-xl font-semibold text-neutral-800">{title}</p>
           <span className="text-sm font-normal text-neutral-500">
             {subtitle}
           </span>
-        </div>
+        </Link>
         {!isShowAuthor && (
           <div className="flex items-center gap-1 text-neutral-500">
             <Link className="text-sm font-semibold" href={href}>

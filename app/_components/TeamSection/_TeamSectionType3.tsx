@@ -35,7 +35,7 @@ const TeamSectionType3: React.FC<TeamSectionProps> = ({ data }) => {
                 src={person.imageUrl}
                 alt=""
               />
-              <div className="flex-auto">
+              <div className="flex-auto px-4 lg:p-0">
                 <h3 className="mt-6 text-base font-semibold text-neutral-800">
                   {person.name}
                 </h3>

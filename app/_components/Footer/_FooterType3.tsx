@@ -63,7 +63,7 @@ const FooterType3: React.FC<FooterProps> = ({ data }) => {
             </div>
           </div>
           <div className="flex flex-wrap gap-6 justify-between px-6 lg:px-20 py-6 bg-neutral-800">
-            <div className="flex flex-shrink-0 gap-4 lg:justify-center min-w-[200px]">
+            <div className="flex flex-wrap flex-shrink-0 gap-4 lg:justify-center min-w-[200px] w-full">
               {polices.map((item, index) => (
                 <a
                   key={index}
