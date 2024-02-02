@@ -24,7 +24,7 @@ export const mapSrc =
   "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3046.674359781231!2d-85.40925552258973!3d40.21630607147254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88153d365781e4eb%3A0x90bb0a3a86aab047!2sReVitalize%20Med%20Spa!5e0!3m2!1sen!2sus!4v1694203487764!5m2!1sen!2sus";
 
 // Header
-export const headerType = 2;
+export const headerType = 3;
 export const headerData: HeaderData = {
   title: "enJerneering UI Kit",
   subtitle: "A collection of React components for enJerneering projects",
@@ -157,9 +157,49 @@ export const navbarData: NavbarData = {
   justifyContent: "center",
 };
 
+// Main Content
+export const mainContentType = 3;
+export const mainContentData: MainContentData = {
+  title: "Medium length hero heading goes here",
+  subtitle:
+    "Lorem ipsum dolor sit amet consectetur. Nunc tincidunt pretium ut duis rhoncus. Et pulvinar aliquam malesuada eu praesent ullamcorper quam quam. ",
+  tagLine: "enJerneering - Innovate Beyond",
+  imgUrl: "/img/bg-contact.png",
+  subHeading: [
+    {
+      title: "Subheading 1",
+      subtitle: "Duis aute irure dolor in reprehenderit in voluptate velit.",
+    },
+    {
+      title: "Subheading 2",
+      subtitle: "Duis aute irure dolor in reprehenderit in voluptate velit.",
+    },
+    {
+      title: "Subheading 3",
+      subtitle: "Duis aute irure dolor in reprehenderit in voluptate velit.",
+    },
+    {
+      title: "Subheading 4",
+      subtitle: "Duis aute irure dolor in reprehenderit in voluptate velit.",
+    },
+    {
+      title: "Subheading 5",
+      subtitle: "Duis aute irure dolor in reprehenderit in voluptate velit.",
+    },
+  ],
+  gallery: [
+    "/img/blogs/blog-1.jpeg",
+    "/img/blogs/blog-2.jpeg",
+    "/img/blogs/blog-3.jpeg",
+    "/img/blogs/blog-4.jpeg",
+    "/img/blogs/blog-detail-1.jpeg",
+    "/img/blogs/blog-detail-2.jpeg",
+  ],
+  videoUrl: "/videos/laser-resurfacing.mp4",
+};
+
 // Call to action
 export const ctaType = 3;
-
 export const ctaData: HeaderData = {
   title: "Medium length CTA goes here",
   subtitle:
@@ -173,85 +213,10 @@ export const ctaData: HeaderData = {
   isRowReverse: false,
 };
 
-// Footer
 
-export const footerType = 3;
-
-export const footerData: FooterData = {
-  logo: "/img/enJerneering_black.png",
-  slogan:
-    "Lorem ipsum dolor sit amet consectetur. Nunc tincidunt pretium ut duis rhoncus. Et pulvinar aliquam malesuada.",
-  socials: [
-    {
-      name: "linkedin",
-      url: "/",
-      icon: "pi-linkedin",
-    },
-    {
-      name: "github",
-      url: "/",
-      icon: "pi-github",
-    },
-    {
-      name: "instagram",
-      url: "/",
-      icon: "pi-instagram",
-    },
-    {
-      name: "facebook",
-      url: "/",
-      icon: "pi-facebook",
-    },
-  ],
-  navigation: [
-    {
-      title: "Page 1",
-      href: "/",
-      pageGroup: "Page group 1",
-    },
-    {
-      title: "Page 2",
-      href: "/",
-      pageGroup: "Page group 1",
-    },
-    {
-      title: "Page 3",
-      href: "/",
-      pageGroup: "Page group 1",
-    },
-    {
-      title: "Page 4",
-      href: "/",
-      pageGroup: "Page group 2",
-    },
-    {
-      title: "Page 5",
-      href: "/",
-      pageGroup: "Page group 2",
-    },
-    {
-      title: "Page 6",
-      href: "/",
-      pageGroup: "Page group 3",
-    },
-    {
-      title: "Page 7",
-      href: "/",
-      pageGroup: "Page group 3",
-    },
-  ],
-  polices: [
-    { title: "Privacy Policy", url: "/" },
-    { title: "Terms & Conditions", url: "/" },
-    { title: "Legal Information", url: "/" },
-  ],
-  ctaButtonLabel: "Submit",
-  ctaButtonUrl: "/",
-};
 
 // Team Section
-export const teamSectionType = 3;
-
+export const teamSectionType = 2;
 export const teamSectionData: TeamSectionData = {
   description:
     "Lorem ipsum dolor sit amet consectetur. Nunc tincidunt pretium ut duis rhoncus. Et pulvinar aliquam malesuada.",
@@ -372,8 +337,7 @@ export const teamSectionData: TeamSectionData = {
 };
 
 // Contact
-
-export const contactType = 3;
+export const contactType = 1;
 export const contactData: ContactData = {
   title: "Contact Us",
   subtitle:
@@ -389,50 +353,8 @@ export const contactData: ContactData = {
   mapSrc: mapSrc,
 };
 
-// Main Content
-
-export const mainContentType = 1;
-export const mainContentData: MainContentData = {
-  title: "Medium length hero heading goes here",
-  subtitle:
-    "Lorem ipsum dolor sit amet consectetur. Nunc tincidunt pretium ut duis rhoncus. Et pulvinar aliquam malesuada eu praesent ullamcorper quam quam. ",
-  tagLine: "enJerneering - Innovate Beyond",
-  imgUrl: "/img/bg-contact.png",
-  subHeading: [
-    {
-      title: "Subheading 1",
-      subtitle: "Duis aute irure dolor in reprehenderit in voluptate velit.",
-    },
-    {
-      title: "Subheading 2",
-      subtitle: "Duis aute irure dolor in reprehenderit in voluptate velit.",
-    },
-    {
-      title: "Subheading 3",
-      subtitle: "Duis aute irure dolor in reprehenderit in voluptate velit.",
-    },
-    {
-      title: "Subheading 4",
-      subtitle: "Duis aute irure dolor in reprehenderit in voluptate velit.",
-    },
-    {
-      title: "Subheading 5",
-      subtitle: "Duis aute irure dolor in reprehenderit in voluptate velit.",
-    },
-  ],
-  gallery: [
-    "/img/blogs/blog-1.jpeg",
-    "/img/blogs/blog-2.jpeg",
-    "/img/blogs/blog-3.jpeg",
-    "/img/blogs/blog-4.jpeg",
-    "/img/blogs/blog-detail-1.jpeg",
-    "/img/blogs/blog-detail-2.jpeg",
-  ],
-  videoUrl: "/videos/laser-resurfacing.mp4",
-};
-
 // Servives
-export const serviceType = 3;
+export const serviceType = 1;
 export const serviceData: ServicesSectionData = {
   title: "Medium length hero heading goes here",
   subtitle:
@@ -526,4 +448,79 @@ export const blogData: BlogData = {
     },
   ],
   isShowAuthor: true,
+};
+
+
+// Footer
+export const footerType = 1;
+export const footerData: FooterData = {
+  logo: "/img/enJerneering_black.png",
+  slogan:
+    "Lorem ipsum dolor sit amet consectetur. Nunc tincidunt pretium ut duis rhoncus. Et pulvinar aliquam malesuada.",
+  socials: [
+    {
+      name: "linkedin",
+      url: "/",
+      icon: "pi-linkedin",
+    },
+    {
+      name: "github",
+      url: "/",
+      icon: "pi-github",
+    },
+    {
+      name: "instagram",
+      url: "/",
+      icon: "pi-instagram",
+    },
+    {
+      name: "facebook",
+      url: "/",
+      icon: "pi-facebook",
+    },
+  ],
+  navigation: [
+    {
+      title: "Page 1",
+      href: "/",
+      pageGroup: "Page group 1",
+    },
+    {
+      title: "Page 2",
+      href: "/",
+      pageGroup: "Page group 1",
+    },
+    {
+      title: "Page 3",
+      href: "/",
+      pageGroup: "Page group 1",
+    },
+    {
+      title: "Page 4",
+      href: "/",
+      pageGroup: "Page group 2",
+    },
+    {
+      title: "Page 5",
+      href: "/",
+      pageGroup: "Page group 2",
+    },
+    {
+      title: "Page 6",
+      href: "/",
+      pageGroup: "Page group 3",
+    },
+    {
+      title: "Page 7",
+      href: "/",
+      pageGroup: "Page group 3",
+    },
+  ],
+  polices: [
+    { title: "Privacy Policy", url: "/" },
+    { title: "Terms & Conditions", url: "/" },
+    { title: "Legal Information", url: "/" },
+  ],
+  ctaButtonLabel: "Submit",
+  ctaButtonUrl: "/",
 };

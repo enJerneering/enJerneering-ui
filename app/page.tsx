@@ -33,8 +33,6 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  const baseUrl = getBaseUrl();
-
   return (
     <div>
       <Header type={headerType} data={headerData} />
