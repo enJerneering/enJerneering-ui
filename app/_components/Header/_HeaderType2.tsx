@@ -18,6 +18,7 @@ const HeaderType2: React.FC<HeaderProps> = ({ data }) => {
     primaryUrl = "#",
     secondaryUrl = "#",
     imgUrl = "default-image.jpg",
+    align = "center",
   } = data;
 
   return (
@@ -36,8 +37,10 @@ const HeaderType2: React.FC<HeaderProps> = ({ data }) => {
       </div>
 
       <div className="mx-auto max-w-[1440px] min-h-[624px] h-full py-20 px-6 flex gap-10 items-center justify-center lg:gap-16 z-10 relative">
-        <div className="mt-10 w-full flex flex-col items-center justify-center gap-10 lg:mt-0 lg:h-full">
-          <div className="flex flex-col gap-10 text-center">
+        <div
+          className={`mt-10 w-full flex flex-col items-${align} justify-center gap-10 lg:mt-0 lg:h-full`}
+        >
+          <div className={`flex flex-col gap-10 text-${align} max-w-[960px]`}>
             <h1 className="text-white">{title}</h1>
             <h6 className="text-white">{subtitle}</h6>
           </div>
