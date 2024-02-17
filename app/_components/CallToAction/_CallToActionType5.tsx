@@ -23,7 +23,7 @@ const CallToActionType5: React.FC<CallToActionProps> = ({ data }) => {
   } = data;
 
   return (
-    <div className="bg-gray-50 relative p-20">
+    <div className="bg-gray-50 relative px-6 py-20 lg:p-20">
       <div className="mx-auto max-w-[1440px] py-20 px-6 gap-10 lg:p-20 md:flex lg:items-center lg:justify-center lg:gap-10 relative bg-neutral-800">
         <div className="mx-auto max-w-screen-xl mt-10 flex flex-col items-center justify-center gap-10 lg:mt-0 lg:h-full">
           <div className="flex flex-col gap-6 text-center">
@@ -36,8 +36,8 @@ const CallToActionType5: React.FC<CallToActionProps> = ({ data }) => {
             <h6 className="leading-6 text-gray-50">{subtitle}</h6>
           </div>
 
-          <div className="flex flex-col gap-6">
-            <div className="flex gap-6 w-[623px]">
+          <div className="flex flex-col gap-6 text-center">
+            <div className="flex flex-col gap-6 lg:flex-row lg:w-[623px]">
               <input
                 type="email"
                 name="email"
