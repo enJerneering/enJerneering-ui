@@ -41,7 +41,7 @@ const TeamSectionType3: React.FC<TeamSectionProps> = ({ data }) => {
                 </h3>
                 <p className="text-sm text-neutral-500">{person.role}</p>
                 <p className="mt-4 text-sm text-neutral-500">{person.bio}</p>
-                <ul role="list" className="mt-4 mb-6     flex gap-x-2">
+                <ul role="list" className="mt-4 mb-6 flex gap-x-2">
                   {person.socials.map((social, index) => (
                     <li key={index}>
                       <a

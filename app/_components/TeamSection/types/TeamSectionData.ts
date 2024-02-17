@@ -1,6 +1,7 @@
 export type TeamSectionData = {
   description: string;
   people: People[];
+  tagLine?: string;
 };
 
 export type People = {
