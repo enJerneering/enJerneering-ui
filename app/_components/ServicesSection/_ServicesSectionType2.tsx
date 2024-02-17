@@ -15,7 +15,9 @@ const ServicesSectionType2: React.FC<ServicesSectionProps> = ({ data }) => {
       <div className="mx-auto max-w-[1440px] px-6 py-20 lg:p-20">
         <div className="mx-auto grid max-w-screen-xl grid-cols-1 gap-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
           <div className="flex flex-col gap-6">
-            <span className="text-base uppercase font-bold">{tagLine}</span>
+            <span className="text-base uppercase font-bold text-neutral-500">
+              {tagLine}
+            </span>
             <h2 className="text-3xl font-bold tracking-tight text-neutral-800 sm:text-4xl">
               {title}
             </h2>
