@@ -20,9 +20,12 @@ interface SubLinkComponentProps {
 /**
  * SubLink component is used to render sub links in the navbar
  * @param param0 = { title, subLinks }
- * @returns 
+ * @returns
  */
-const SubLinkMobile: React.FC<SubLinkComponentProps> = ({ title, subLinks }) => (
+const SubLinkMobile: React.FC<SubLinkComponentProps> = ({
+  title,
+  subLinks,
+}) => (
   <Disclosure as="div" className="-mx-3">
     {({ open }) => (
       <>
@@ -55,10 +58,10 @@ const SubLinkMobile: React.FC<SubLinkComponentProps> = ({ title, subLinks }) => 
 /**
  * SubLink component is used to render sub links in the navbar
  * @param param0 = { title, subLinks }
- * @returns 
+ * @returns
  */
 const SubLinkWeb: React.FC<SubLinkComponentProps> = ({ title, subLinks }) => (
-  <Popover className="relative">
+  <Popover className="relative flex-shrink-0">
     {({ open }) => (
       <>
         <Popover.Button className="flex items-center gap-x-1 text-base font-semibold leading-8 text-gray-900 hover:text-primary-700 transition-all duration-300 ease-in-out focus:border-0 focus:outline-0 focus:text-primary-700">
@@ -93,7 +96,7 @@ const SubLinkWeb: React.FC<SubLinkComponentProps> = ({ title, subLinks }) => (
 /**
  * SubLink component is used to render sub links in the navbar
  * @param param0 = { title, subLinks, isMobile }
- * @returns 
+ * @returns
  */
 const SubLinkType1: React.FC<HeaderProps> = ({ title, subLinks, isMobile }) => {
   return (
