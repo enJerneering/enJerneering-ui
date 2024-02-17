@@ -4,6 +4,8 @@ import React from "react";
 import FooterType1 from "./_FooterType1";
 import FooterType2 from "./_FooterType2";
 import FooterType3 from "./_FooterType3";
+import FooterType4 from "./_FooterType4";
+import FooterType5 from "./_FooterType5";
 import { FooterData } from "./types/FooterData";
 
 interface FooterProps {
@@ -20,6 +22,10 @@ const Footer: React.FC<FooterProps> = ({ type, data }) => {
         return <FooterType2 data={data} />;
       case 3:
         return <FooterType3 data={data} />;
+      case 4:
+        return <FooterType4 data={data} />;
+      case 5:
+        return <FooterType5 data={data} />;
       default:
         throw new Error(`Footer type ${type} is not supported`);
     }

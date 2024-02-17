@@ -40,33 +40,36 @@ const FooterType2: React.FC<FooterProps> = ({ data }) => {
           Footer
         </h2>
         <div className="px-6 py-10 lg:px-20">
-          <div className="flex flex-col gap-8 xl:flex-row xl:gap-20">
-            <div className="w-full grid grid-cols-2 md:grid-cols-3 xl:col-span-3 gap-8">
-              {Object.entries(groupedNavigation).map(
-                ([pageGroup, navigation], index) => (
-                  <div key={index}>
-                    <h3 className="uppercase text-base font-semibold text-neutral-800">
-                      {pageGroup}
-                    </h3>
-                    <ul role="list" className="mt-6 space-y-4">
-                      {navigation.map((item, index) => (
-                        <li key={index}>
-                          <a
-                            href={item.href}
-                            className="text-base font-normal text-neutral-500 hover:text-neutral-800"
-                          >
-                            {item.title}
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )
-              )}
+          <div className="grid lg:grid-cols-4 gap-8">
+            <div className="col-span-3">
+              <div className="grid grid-cols-2 md:grid-cols-3 xl:col-span-3 gap-8">
+                {Object.entries(groupedNavigation).map(
+                  ([pageGroup, navigation], index) => (
+                    <div key={index}>
+                      <h3 className="uppercase text-base font-semibold text-neutral-800">
+                        {pageGroup}
+                      </h3>
+                      <ul role="list" className="mt-6 space-y-4">
+                        {navigation.map((item, index) => (
+                          <li key={index}>
+                            <a
+                              href={item.href}
+                              className="text-base font-normal text-neutral-500 hover:text-neutral-800"
+                            >
+                              {item.title}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )
+                )}
+              </div>
             </div>
-            <div className="flex flex-col flex-shrink-0 gap-4 justify-center min-w-[320px] xl:justify-start">
+
+            <div className="flex flex-col flex-shrink-0 gap-4">
               <p className="text-base font-normal text-neutral-500">{slogan}</p>
-              <div className="relative mt-2 rounded-md shadow-sm">
+              <div className="relative mt-2 rounded-md shadow-sm max-w-[320px]">
                 <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
                   <i
                     className="pi pi-envelope text-neutral-500"
