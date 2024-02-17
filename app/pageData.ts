@@ -1,15 +1,13 @@
 import { HeaderData } from "@components/Header/types/HeaderData";
 import { Metadata } from "next";
-import {
-  FeaturedData,
-  NavbarData,
-} from "./_components/Navbar/types/NavbarData";
+import { NavbarData } from "./_components/Navbar/types/NavbarData";
 import { FooterData } from "./_components/Footer/types/FooterData";
 import { TeamSectionData } from "./_components/TeamSection/types/TeamSectionData";
 import { ContactData } from "./_components/Contact/types/ContactData";
 import { MainContentData } from "./_components/MainContent/types/MainContentData";
 import { ServicesSectionData } from "./_components/ServicesSection/types/ServicesSectionData";
 import { BlogData } from "./_components/Blog/types/BlogData";
+import { CallToActionData } from "./_components/CallToAction/types/CallToActionData";
 
 // Search Engine Optimization
 export const seo: Metadata = {
@@ -35,11 +33,14 @@ export const headerData: HeaderData = {
   secondaryUrl: "/",
   imgUrl: "/img/cryo.jpeg",
   videoUrl: "/videos/laser-resurfacing.mp4",
+  align: "left",
   isRowReverse: false,
+  hasEmailAction: false,
 };
 
 //Navbar
-export const navbarType = 3;
+export const navbarType: number = 3;
+export const navbarTypeSubLink: number = 1;
 export const navbarData: NavbarData = {
   logo: "/img/enJerneering_black.png",
   menuList: [
@@ -200,7 +201,7 @@ export const mainContentData: MainContentData = {
 
 // Call to action
 export const ctaType = 3;
-export const ctaData: HeaderData = {
+export const ctaData: CallToActionData = {
   title: "Medium length CTA goes here",
   subtitle:
     "Lorem ipsum dolor sit amet consectetur. Nunc tincidunt pretium ut duis rhoncus. Et pulvinar aliquam malesuada eu praesent quam quam.",
@@ -210,10 +211,9 @@ export const ctaData: HeaderData = {
   primaryUrl: "/",
   secondaryUrl: "/",
   imgUrl: "/img/bg-contact.png",
+  backgroundColor: "#262626",
   isRowReverse: false,
 };
-
-
 
 // Team Section
 export const teamSectionType = 2;
@@ -334,6 +334,7 @@ export const teamSectionData: TeamSectionData = {
       ],
     },
   ],
+  tagLine: "enJerneering - Innovate Beyond",
 };
 
 // Contact
@@ -351,6 +352,28 @@ export const contactData: ContactData = {
   primaryLabel: "Send message",
   imgUrl: "/img/bg-contact.png",
   mapSrc: mapSrc,
+  socials: [
+    {
+      name: "linkedin",
+      url: "/",
+      icon: "pi-linkedin",
+    },
+    {
+      name: "github",
+      url: "/",
+      icon: "pi-github",
+    },
+    {
+      name: "instagram",
+      url: "/",
+      icon: "pi-instagram",
+    },
+    {
+      name: "facebook",
+      url: "/",
+      icon: "pi-facebook",
+    },
+  ],
 };
 
 // Servives
@@ -450,7 +473,6 @@ export const blogData: BlogData = {
   isShowAuthor: true,
 };
 
-
 // Footer
 export const footerType = 1;
 export const footerData: FooterData = {
@@ -523,4 +545,26 @@ export const footerData: FooterData = {
   ],
   ctaButtonLabel: "Submit",
   ctaButtonUrl: "/",
+  singleLinks: [
+    {
+      title: "Link One",
+      href: "/",
+    },
+    {
+      title: "Link Two",
+      href: "/",
+    },
+    {
+      title: "Link Three",
+      href: "/",
+    },
+    {
+      title: "Link Four",
+      href: "/",
+    },
+    {
+      title: "Link Five",
+      href: "/",
+    },
+  ],
 };
