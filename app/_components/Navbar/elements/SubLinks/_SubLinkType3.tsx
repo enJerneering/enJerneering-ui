@@ -5,6 +5,7 @@ import { Disclosure, Popover } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { classNames } from "@/_utils/helpers";
 import { SubLink } from "../../types/NavbarData";
+import { navbarType } from "@/pageData";
 
 interface HeaderProps {
   title: string;
@@ -86,7 +87,11 @@ const SubLinkWeb: React.FC<SubComponentProps> = ({
             aria-hidden="true"
           />
         </Popover.Button>
-        <Popover.Panel className="absolute inset-x-0 top-0 mt-[86px] z-[1000] w-screen bg-gray-50 shadow-sm border border-gray-200">
+        <Popover.Panel
+          className={`absolute inset-x-0 top-0 mt-[86px] ${
+            navbarType === 2 && "lg:mt-[178px]"
+          } z-[1000] w-screen bg-gray-50 shadow-sm border border-gray-200`}
+        >
           <div className="mx-auto grid grid-cols-4 gap-x-4 px-6 py-6 lg:px-10 xl:gap-x-20">
             {Object.entries(groupedSubLinks).map(
               ([pageGroup, subLinks], index) => (
