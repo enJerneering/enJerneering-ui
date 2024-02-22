@@ -87,11 +87,11 @@ const ContactType5: React.FC<ContactProps> = ({ data }) => {
               </div>
             </div>
           </div>
-          <div className="lg:col-span-2">
+          <div className="min-h-[436px] lg:col-span-2">
             <iframe
               src={mapSrc}
               width="656"
-              height="436"
+              height="100%"
               className="rounded-2xl w-full shadow-xl"
               allowFullScreen
               loading="lazy"

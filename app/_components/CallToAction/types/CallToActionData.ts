@@ -7,5 +7,6 @@ export type CallToActionData = {
   primaryUrl?: string;
   secondaryUrl?: string;
   imgUrl?: string;
+  backgroundColor?: string;
   isRowReverse?: boolean;
 };

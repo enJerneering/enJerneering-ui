@@ -6,6 +6,10 @@ export type MainContentData = {
   imgUrl?: string;
   videoUrl?: string;
   gallery?: string[];
+  primaryLabel: string;
+  secondaryLabel: string;
+  primaryUrl?: string;
+  secondaryUrl?: string;
 };
 
 export type SubHeading = {

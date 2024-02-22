@@ -45,7 +45,9 @@ const MainContentType1: React.FC<MainContentProps> = ({ data }) => {
         ></div>
         <div className="mx-auto max-w-screen-xl mt-10 lg:h-full lg:w-1/2 lg:mt-0">
           <div className="flex flex-col gap-4 text-left">
-            <span className="text-base uppercase font-bold">{tagLine}</span>
+            <span className="text-base uppercase font-bold text-neutral-500">
+              {tagLine}
+            </span>
             <h5>{title}</h5>
             <p className="text-base font-normal text-neutral-500">{subtitle}</p>
           </div>

@@ -10,4 +10,11 @@ export type ContactData = {
   primaryLabel: string;
   imgUrl?: string;
   mapSrc?: string;
+  socials: Social[];
+};
+
+export type Social = {
+  name: string;
+  icon: string;
+  url: string;
 };

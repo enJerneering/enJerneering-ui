@@ -6,6 +6,7 @@ export type FooterData = {
   polices: Policy[];
   ctaButtonLabel?: string;
   ctaButtonUrl?: string;
+  singleLinks?: Navigation[];
 };
 
 export type Social = {

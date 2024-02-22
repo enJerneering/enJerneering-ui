@@ -4,6 +4,8 @@ import React from "react";
 import MainContentType1 from "./_MainContentType1";
 import MainContentType2 from "./_MainContentType2";
 import MainContentType3 from "./_MainContentType3";
+import MainContentType4 from "./_MainContentType4";
+import MainContentType5 from "./_MainContentType5";
 import { MainContentData } from "./types/MainContentData";
 
 interface MainContentProps {
@@ -20,6 +22,10 @@ const MainContent: React.FC<MainContentProps> = ({ type, data }) => {
         return <MainContentType2 data={data} />;
       case 3:
         return <MainContentType3 data={data} />;
+      case 4:
+        return <MainContentType4 data={data} />;
+      case 5:
+        return <MainContentType5 data={data} />;
       default:
         throw new Error(`MainContent type ${type} is not supported`);
     }

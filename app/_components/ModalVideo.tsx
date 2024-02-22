@@ -28,17 +28,17 @@ export default function ModalVideo({
   const videoRef = useRef<HTMLVideoElement>(null);
 
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center flex-1">
       {/* Video thumbnail */}
       <button
-        className="relative flex justify-center items-center h-[40vh] overflow-hidden lg:h-auto lg:overflow-auto focus:outline-none focus-visible:ring focus-visible:ring-indigo-300 rounded-3xl group"
+        className="relative flex justify-center items-center h-[40vh] w-full overflow-hidden lg:h-auto lg:overflow-auto focus:outline-none focus-visible:ring focus-visible:ring-indigo-300 rounded-3xl group"
         onClick={() => {
           setModalOpen(true);
         }}
         aria-label="Watch the video"
       >
         <Image
-          className="rounded-3xl lg:shadow-2xl transition-shadow duration-300 ease-in-out w-full"
+          className="rounded-3xl lg:shadow-2xl transition-shadow duration-300 ease-in-out w-full object-cover"
           src={thumb}
           width={thumbWidth}
           height={thumbHeight}

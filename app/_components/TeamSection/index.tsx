@@ -4,6 +4,8 @@ import React from "react";
 import TeamSectionType1 from "./_TeamSectionType1";
 import TeamSectionType2 from "./_TeamSectionType2";
 import TeamSectionType3 from "./_TeamSectionType3";
+import TeamSectionType4 from "./_TeamSectionType4";
+import TeamSectionType5 from "./_TeamSectionType5";
 import { TeamSectionData } from "./types/TeamSectionData";
 
 interface TeamSectionProps {
@@ -20,6 +22,10 @@ const TeamSection: React.FC<TeamSectionProps> = ({ type, data }) => {
         return <TeamSectionType2 data={data} />;
       case 3:
         return <TeamSectionType3 data={data} />;
+      case 4:
+        return <TeamSectionType4 data={data} />;
+      case 5:
+        return <TeamSectionType5 data={data} />;
       default:
         throw new Error(`TeamSection type ${type} is not supported`);
     }
