@@ -1,8 +1,8 @@
-import Navbar from "@components/Navbar";
+import { Navbar } from "enjerneering-ui-kit";
 import "./globals.css";
 import "primeicons/primeicons.css";
 import { Roboto } from "next/font/google";
-import Footer from "@components/Footer";
+import { Footer } from "enjerneering-ui-kit";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import {

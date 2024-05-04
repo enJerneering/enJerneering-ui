@@ -1,13 +1,13 @@
-import { HeaderData } from "@components/Header/types/HeaderData";
+import { HeaderData } from "enjerneering-ui-kit/_components/Header/types/HeaderData";
 import { Metadata } from "next";
-import { NavbarData } from "./_components/Navbar/types/NavbarData";
-import { FooterData } from "./_components/Footer/types/FooterData";
-import { TeamSectionData } from "./_components/TeamSection/types/TeamSectionData";
-import { ContactData } from "./_components/Contact/types/ContactData";
-import { MainContentData } from "./_components/MainContent/types/MainContentData";
-import { ServicesSectionData } from "./_components/ServicesSection/types/ServicesSectionData";
-import { BlogData } from "./_components/Blog/types/BlogData";
-import { CallToActionData } from "./_components/CallToAction/types/CallToActionData";
+import { NavbarData } from "enjerneering-ui-kit/_components/Navbar/types/NavbarData";
+import { FooterData } from "enjerneering-ui-kit/_components/Footer/types/FooterData";
+import { TeamSectionData } from "enjerneering-ui-kit/_components/TeamSection/types/TeamSectionData";
+import { ContactData } from "enjerneering-ui-kit/_components/Contact/types/ContactData";
+import { MainContentData } from "enjerneering-ui-kit/_components/MainContent/types/MainContentData";
+import { ServicesSectionData } from "enjerneering-ui-kit/_components/ServicesSection/types/ServicesSectionData";
+import { BlogData } from "enjerneering-ui-kit/_components/Blog/types/BlogData";
+import { CallToActionData } from "enjerneering-ui-kit/_components/CallToAction/types/CallToActionData";
 
 // Search Engine Optimization
 export const seo: Metadata = {
@@ -197,6 +197,8 @@ export const mainContentData: MainContentData = {
     "/img/blogs/blog-detail-2.jpeg",
   ],
   videoUrl: "/videos/laser-resurfacing.mp4",
+  primaryLabel: "Get Started",
+  secondaryLabel: "Live Demo",
 };
 
 // Call to action

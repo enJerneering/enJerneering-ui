@@ -1,7 +1,6 @@
 //NOTE: tsconfig.json has custom paths configured for @lib and @components, use them
-import { getBaseUrl } from "@lib/meta";
 import { Metadata } from "next";
-import Header from "./_components/Header";
+import { Header } from "enjerneering-ui-kit";
 import {
   seo,
   headerType,
@@ -19,12 +18,12 @@ import {
   blogType,
   blogData,
 } from "./pageData";
-import CallToAction from "./_components/CallToAction";
-import TeamSection from "./_components/TeamSection";
-import Contact from "./_components/Contact";
-import MainContent from "./_components/MainContent";
-import ServicesSection from "./_components/ServicesSection";
-import Blog from "./_components/Blog";
+import { CallToAction } from "enjerneering-ui-kit";
+import { TeamSection } from "enjerneering-ui-kit";
+import { Contact } from "enjerneering-ui-kit";
+import { MainContent } from "enjerneering-ui-kit";
+import { ServicesSection } from "enjerneering-ui-kit";
+import { Blog } from "enjerneering-ui-kit";
 
 export const metadata: Metadata = {
   title: seo.title,
